@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+<style>
+*{box-sizing:border-box}
+img{max-width:100%;height:auto}
+</style>
+</helmet>
+<header style="width:100%;font-family:'Open Sans',Helvetica,Arial,sans-serif;position:sticky;top:0;z-index:60;background:#ffffff;border-bottom:1px solid #E7EDF3">
+  <nav style="max-width:1240px;margin:0 auto;padding:0 22px;display:flex;align-items:stretch;justify-content:space-between;gap:24px;min-height:78px">
+    <a href="index.html" style="display:flex;align-items:center;flex-shrink:0">
+      <img src="uploads/pasted-1788173136832-0.png" alt="V Secure Elevators Pvt. Ltd. logo" style="height:46px;width:auto;display:block" />
+    </a>
+    <div style="display:{{ deskDisplay }};align-items:stretch;gap:34px;flex:1">
+      <ul style="display:flex;flex:1;justify-content:center;align-items:stretch;gap:34px;list-style:none;margin:0;padding:0">
+        <li style="display:flex"><a href="index.html" style="display:flex;align-items:center;font-size:14.5px;font-weight:600;letter-spacing:0.2px;text-decoration:none;border-bottom:2px solid {{ uHome }};color:{{ cHome }}" style-hover="color:#0D47A1">Home</a></li>
+        <li style="display:flex"><a href="About-Us.dc.html" style="display:flex;align-items:center;font-size:14.5px;font-weight:600;letter-spacing:0.2px;text-decoration:none;border-bottom:2px solid {{ uAbout }};color:{{ cAbout }}" style-hover="color:#0D47A1">About Us</a></li>
+        <li style="display:flex"><a href="Services.dc.html" style="display:flex;align-items:center;font-size:14.5px;font-weight:600;letter-spacing:0.2px;text-decoration:none;border-bottom:2px solid {{ uServices }};color:{{ cServices }}" style-hover="color:#0D47A1">Services</a></li>
+        <li style="display:flex"><a href="Clients.dc.html" style="display:flex;align-items:center;font-size:14.5px;font-weight:600;letter-spacing:0.2px;text-decoration:none;border-bottom:2px solid {{ uClients }};color:{{ cClients }}" style-hover="color:#0D47A1">Clients</a></li>
+        <li style="display:flex"><a href="Contact-Us.dc.html" style="display:flex;align-items:center;font-size:14.5px;font-weight:600;letter-spacing:0.2px;text-decoration:none;border-bottom:2px solid {{ uContact }};color:{{ cContact }}" style-hover="color:#0D47A1">Contact Us</a></li>
+      </ul>
+      <div style="display:flex;align-items:center">
+        <button type="button" onClick="{{ openQuote }}" style="background:#0D47A1;color:#ffffff;font-family:'Poppins',Helvetica,sans-serif;font-weight:600;font-size:14px;padding:14px 24px;border:0;cursor:pointer;white-space:nowrap" style-hover="background:#1976D2">Get a Free Quote</button>
+      </div>
+    </div>
+    <div style="display:{{ burgerDisplay }};align-items:center">
+      <button type="button" aria-label="Open menu" onClick="{{ toggle }}" style="background:#0D47A1;color:#ffffff;border:0;width:48px;height:48px;font-size:19px;cursor:pointer">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+  </nav>
+  <sc-if value="{{ open }}" hint-placeholder-val="{{ false }}">
+    <div style="border-top:1px solid #E7EDF3;background:#ffffff;padding:8px 22px 22px">
+      <ul style="display:grid;gap:0;list-style:none;margin:0 auto;padding:0;max-width:1240px">
+        <li><a href="index.html" style="display:block;padding:16px 4px;font-size:16px;font-weight:600;color:#0A2647;text-decoration:none;border-bottom:1px solid #EEF2F6">Home</a></li>
+        <li><a href="About-Us.dc.html" style="display:block;padding:16px 4px;font-size:16px;font-weight:600;color:#0A2647;text-decoration:none;border-bottom:1px solid #EEF2F6">About Us</a></li>
+        <li><a href="Services.dc.html" style="display:block;padding:16px 4px;font-size:16px;font-weight:600;color:#0A2647;text-decoration:none;border-bottom:1px solid #EEF2F6">Services</a></li>
+        <li><a href="Clients.dc.html" style="display:block;padding:16px 4px;font-size:16px;font-weight:600;color:#0A2647;text-decoration:none;border-bottom:1px solid #EEF2F6">Clients</a></li>
+        <li><a href="Contact-Us.dc.html" style="display:block;padding:16px 4px;font-size:16px;font-weight:600;color:#0A2647;text-decoration:none;border-bottom:1px solid #EEF2F6">Contact Us</a></li>
+        <li style="margin-top:16px"><button type="button" onClick="{{ openQuote }}" style="display:block;width:100%;text-align:center;background:#0D47A1;color:#ffffff;font-family:'Poppins',Helvetica,sans-serif;font-weight:600;font-size:16px;padding:16px;border:0;cursor:pointer">Get a Free Quote</button></li>
+      </ul>
+    </div>
+  </sc-if>
+</header>
+<sc-if value="{{ quoteOpen }}" hint-placeholder-val="{{ false }}">
+  <div role="dialog" aria-modal="true" aria-label="Request a free quote" style="position:fixed;inset:0;z-index:1000;background:rgba(7,27,51,0.6);display:flex;align-items:flex-start;justify-content:center;padding:24px;overflow:auto;font-family:'Open Sans',Helvetica,Arial,sans-serif" onClick="{{ backdropClose }}">
+    <div style="background:#ffffff;width:100%;max-width:540px;margin:auto;box-shadow:0 30px 70px rgba(7,27,51,0.35)">
+      <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:16px;padding:26px 28px 0">
+        <div style="display:grid;gap:6px">
+          <h2 style="margin:0;font-family:'Poppins',Helvetica,sans-serif;font-weight:700;color:#0A2647;font-size:24px;letter-spacing:-0.4px">Get a free quote</h2>
+          <p style="margin:0;font-size:14.5px;line-height:1.7;color:#5F7488">Share a few details and our team will get back within one working day.</p>
+        </div>
+        <button type="button" aria-label="Close" onClick="{{ closeQuote }}" style="flex-shrink:0;width:38px;height:38px;border:1px solid #E7EDF3;background:#ffffff;color:#5F7488;font-size:16px;cursor:pointer" style-hover="background:#F4F7FB;color:#0A2647"><i class="fas fa-xmark"></i></button>
+      </div>
+      <form action="https://formsubmit.co/sales@vsecureelevators.com" method="POST" style="padding:22px 28px 28px;display:grid;gap:16px">
+        <input type="hidden" name="_subject" value="New quote request - V Secure Elevators" />
+        <input type="hidden" name="_captcha" value="false" />
+        <label style="display:grid;gap:7px;font-size:14px;font-weight:600;color:#33475B">Name
+          <input type="text" name="name" required placeholder="Your full name" style="width:100%;padding:14px 15px;border:1px solid #D3DCE4;border-radius:4px;font-size:15.5px;font-family:'Open Sans',Helvetica,Arial,sans-serif" style-focus="border-color:#1976D2;outline:none" />
+        </label>
+        <label style="display:grid;gap:7px;font-size:14px;font-weight:600;color:#33475B">Phone
+          <input type="tel" name="phone" required placeholder="+91 00000 00000" style="width:100%;padding:14px 15px;border:1px solid #D3DCE4;border-radius:4px;font-size:15.5px;font-family:'Open Sans',Helvetica,Arial,sans-serif" style-focus="border-color:#1976D2;outline:none" />
+        </label>
+        <label style="display:grid;gap:7px;font-size:14px;font-weight:600;color:#33475B">Email
+          <input type="email" name="email" required placeholder="you@example.com" style="width:100%;padding:14px 15px;border:1px solid #D3DCE4;border-radius:4px;font-size:15.5px;font-family:'Open Sans',Helvetica,Arial,sans-serif" style-focus="border-color:#1976D2;outline:none" />
+        </label>
+        <label style="display:grid;gap:7px;font-size:14px;font-weight:600;color:#33475B">What do you need?
+          <select name="requirement" style="width:100%;padding:14px 15px;border:1px solid #D3DCE4;border-radius:4px;font-size:15.5px;background:#ffffff;font-family:'Open Sans',Helvetica,Arial,sans-serif" style-focus="border-color:#1976D2;outline:none">
+            <option>New elevator installation</option>
+            <option>Maintenance or AMC</option>
+            <option>Modernization or upgrade</option>
+            <option>Repair or breakdown</option>
+            <option>Home elevator</option>
+            <option>Something else</option>
+          </select>
+        </label>
+        <label style="display:grid;gap:7px;font-size:14px;font-weight:600;color:#33475B">Message
+          <textarea name="message" rows="4" required placeholder="Tell us about your building, number of floors and requirement" style="width:100%;padding:14px 15px;border:1px solid #D3DCE4;border-radius:4px;font-size:15.5px;resize:vertical;font-family:'Open Sans',Helvetica,Arial,sans-serif" style-focus="border-color:#1976D2;outline:none"></textarea>
+        </label>
+        <button type="submit" style="width:100%;background:#0D47A1;color:#ffffff;font-family:'Poppins',Helvetica,sans-serif;font-weight:600;font-size:16.5px;padding:17px;border:0;border-radius:4px;cursor:pointer" style-hover="background:#1976D2">Send Request</button>
+        <p style="margin:0;font-size:12.5px;color:#7C8DA0">Requests are sent to sales@vsecureelevators.com.</p>
+      </form>
+    </div>
+  </div>
+</sc-if>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1240,&quot;height&quot;:80},&quot;active&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;home&quot;,&quot;about&quot;,&quot;services&quot;,&quot;clients&quot;,&quot;contact&quot;],&quot;default&quot;:&quot;home&quot;,&quot;tsType&quot;:&quot;string&quot;}}">
+class Component extends DCLogic {
+  state = { open: false, quoteOpen: false, w: typeof window !== 'undefined' ? window.innerWidth : 1200 };
+  componentDidMount() {
+    this._r = () => this.setState({ w: window.innerWidth, open: window.innerWidth > 1024 ? false : this.state.open });
+    window.addEventListener('resize', this._r);
+    this._r();
+  }
+  componentWillUnmount() { window.removeEventListener('resize', this._r); }
+  renderVals() {
+    const mobile = this.state.w <= 1024;
+    const active = this.props.active || 'home';
+    const c = (k) => (active === k ? '#0D47A1' : '#425466');
+    const u = (k) => (active === k ? '#0D47A1' : 'transparent');
+    return {
+      open: mobile && this.state.open,
+      burgerDisplay: mobile ? 'flex' : 'none',
+      deskDisplay: mobile ? 'none' : 'flex',
+      toggle: () => this.setState({ open: !this.state.open }),
+      quoteOpen: this.state.quoteOpen,
+      openQuote: () => this.setState({ quoteOpen: true, open: false }),
+      closeQuote: () => this.setState({ quoteOpen: false }),
+      backdropClose: (e) => { if (e.target === e.currentTarget) this.setState({ quoteOpen: false }); },
+      cHome: c('home'), cAbout: c('about'), cServices: c('services'), cClients: c('clients'), cContact: c('contact'),
+      uHome: u('home'), uAbout: u('about'), uServices: u('services'), uClients: u('clients'), uContact: u('contact')
+    };
+  }
+}
+</script>
+</body>
+</html>
