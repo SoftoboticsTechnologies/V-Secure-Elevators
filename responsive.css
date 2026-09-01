@@ -46,6 +46,9 @@ img, video, iframe { max-width: 100%; }
   [style*="padding:clamp(70px,10vw,120px) 24px"],
   [style*="padding:clamp(80px,11vw,140px) 24px"] { padding-left: 20px !important; padding-right: 20px !important; }
 
+  [style*="grid-template-columns:1fr 1fr"] { grid-template-columns: 1fr !important; }
+  [style*="grid-template-columns:1fr 1fr"] > img[style*="margin-top:38px"] { margin-top: 0 !important; }
+
   form { border-radius: 20px !important; }
   input, select, textarea { font-size: 16px !important; }
 
