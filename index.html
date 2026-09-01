@@ -364,15 +364,22 @@ class Component extends DCLogic {
   scheduleHero() {
     clearTimeout(this.t);
     clearTimeout(this.t2);
-    const activeVideoRefs = [this.video.current, this.video2.current, this.video3.current];
-    activeVideoRefs.forEach((video) => { if (video) { video.pause(); video.currentTime = 0; } });
+    const activeVideoRefs = [this.video.current, this.video2.current, this.video3.current].filter(Boolean);
+    activeVideoRefs.forEach((video) => {
+      video.pause();
+      video.currentTime = 0;
+      video.muted = true;
+      video.style.opacity = '0';
+    });
     const v = activeVideoRefs[this.state.hero] || activeVideoRefs[0];
-    this.videoPlayCount = 0;
-    if (v) {
-      try { v.currentTime = 0; v.muted = true; const p = v.play(); if (p && p.catch) p.catch(() => {}); } catch (e) {}
-    }
-    const fallbackDelay = Number.isFinite(v && v.duration) && v.duration > 0 ? (v.duration * 2 + 3) * 1000 : 120000;
-    this.t = setTimeout(this.nextHero, fallbackDelay);
+    if (!v) return;
+    v.style.opacity = '1';
+    v.currentTime = 0;
+    v.muted = true;
+    const playPromise = v.play();
+    if (playPromise && playPromise.catch) playPromise.catch(() => {});
+    const duration = Number.isFinite(v.duration) && v.duration > 0 ? v.duration : 6;
+    this.t = setTimeout(this.nextHero, (duration + 0.8) * 1000);
   }
   slides = [
     { kicker: 'Safe. Reliable. Always.', title: "Bangalore's Trusted Elevator Specialists, Since 2021", body: 'V Secure Elevators Pvt. Ltd. installs, maintains and modernises passenger elevators, home lifts, commercial elevators and goods lifts for residential, commercial and institutional projects across Karnataka.' },
@@ -388,18 +395,9 @@ class Component extends DCLogic {
       submit: (e) => { e.preventDefault(); this.setState({ sent: true }); },
       videoRef: this.video,
       statsGridRef: this.statsGrid,
-      videoEnded: (event) => {
-        if (this.videoPlayCount < 1) {
-          this.videoPlayCount += 1;
-          const activeVideoRefs = [this.video.current, this.video2.current, this.video3.current];
-          const video = activeVideoRefs[this.state.hero] || (event && event.currentTarget);
-          if (video) {
-            try { video.currentTime = 0; const p = video.play(); if (p && p.catch) p.catch(() => {}); } catch (e) {}
-          }
-          return;
-        }
+      videoEnded: () => {
         clearTimeout(this.t);
-        this.t2 = setTimeout(this.nextHero, 1000);
+        this.t2 = setTimeout(this.nextHero, 300);
       },
       op0: i === 0 ? 1 : 0,
       op1: i === 1 ? 1 : 0,
