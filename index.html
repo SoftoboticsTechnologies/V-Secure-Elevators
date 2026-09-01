@@ -4,246 +4,424 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script src="./support.js"></script>
+<link rel="stylesheet" href="./responsive.css">
+<link rel="stylesheet" href="./animations.css">
+<script src="./site-animations.js" defer></script>
 </head>
 <body>
 <x-dc>
 <helmet>
-<title>V Secure Elevators Pvt. Ltd. | Elevator Installation &amp; Maintenance in Bangalore</title>
-<meta name="description" content="V Secure Elevators Pvt. Ltd. provides safe and reliable elevator installation, maintenance, modernization and repair services for homes and commercial buildings in Bangalore." />
-<meta name="keywords" content="elevator company Bangalore, lift installation Bangalore, elevator maintenance AMC, home elevators, passenger elevators, elevator modernization, V Secure Elevators" />
-<meta property="og:type" content="website" />
-<meta property="og:title" content="V Secure Elevators Pvt. Ltd. | Safe. Reliable. Always." />
-<meta property="og:description" content="Elevator installation, maintenance and modernization services in Bangalore, built around safety and quality you can trust." />
-<meta property="og:image" content="https://images.unsplash.com/photo-1758448721149-aa0ce8e1b2c9?auto=format&amp;fit=crop&amp;w=1200&amp;q=70" />
-<meta property="og:url" content="https://www.vsecureelevators.com/" />
+<title>V Secure Elevators Pvt. Ltd. | Elevators, Escalators &amp; Modernisation in Bangalore</title>
+<meta name="description" content="V Secure Elevators Pvt. Ltd. designs, installs, maintains and modernises passenger, home and commercial elevators across Bangalore and Karnataka." />
 <link rel="icon" href="uploads/pasted-1788173136832-0.png" />
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"LocalBusiness","name":"V Secure Elevators Pvt. Ltd.","image":"uploads/pasted-1788173136832-0.png","telephone":["+91 9148780701","+91 9060180886"],"email":"sales@vsecureelevators.com","foundingDate":"2021","identifier":"CIN: U31100KA2021PTC155435","address":{"@type":"PostalAddress","streetAddress":"No. 16, Ground Floor, Janvi Complex, 4th Cross, Manjunatha Layout, Machohalli Colony, Dasanapura Hobli, Vishwaneedam","addressLocality":"Bangalore North, Bangalore","addressRegion":"Karnataka","postalCode":"560091","addressCountry":"IN"},"url":"https://www.vsecureelevators.com/"}
-</script>
 <style>
 *{box-sizing:border-box}
-body{margin:0;background:#ffffff;color:#425466;font-family:'Open Sans',Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased}
+body{margin:0;background:#0B0B0C;color:#CFCCC6;font-family:'Jost',Helvetica,Arial,sans-serif;font-weight:300;-webkit-font-smoothing:antialiased}
 img{max-width:100%;height:auto}
-a{color:#1976D2}
-a:hover{color:#0D47A1}
+a{color:#C6A15B}
+a:hover{color:#E0C489}
+summary{list-style:none}
+summary::-webkit-details-marker{display:none}
+@keyframes vsmarquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.hero-years{width:118px!important;height:118px!important;aspect-ratio:1/1;flex:0 0 118px!important;overflow:hidden;border-radius:50%}
+.hero-years>span:first-child{width:100%;height:100%;border-radius:50%!important}
+.hero-years-content{width:100%;height:100%;align-content:center;padding:12px 8px}
+.hero-years-content>span:first-child{font-size:34px!important}
+.hero-years-content>span:last-child{font-size:9px!important;letter-spacing:1.6px!important;line-height:1.35!important}
+@media (max-width:700px){
+  .hero-stats{padding:22px 14px 0!important}
+  .hero-stats-grid{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;width:100%!important;gap:18px 12px!important;padding:20px 14px!important;border-radius:22px!important}
+  .hero-stats-grid>span[style*="width:1px"]{display:none!important}
+  .hero-stats-grid>div{width:auto!important;min-width:0;min-height:92px}
+  .hero-stats-grid>div:first-child{width:94px!important;height:94px!important;min-height:94px;justify-self:center}
+  .hero-years-content{padding:8px 5px}
+  .hero-years-content>span:first-child{font-size:29px!important}
+  .hero-years-content>span:last-child{font-size:8px!important;letter-spacing:1.2px!important}
+}
 </style>
 </helmet>
-<dc-import name="SiteNav" active="home" hint-size="100%,90px"></dc-import>
 
-<section aria-label="Hero" style="background:#F4F7FB;border-bottom:1px solid #E7EDF3">
-  <div style="max-width:1240px;margin:0 auto;padding:clamp(44px,6vw,84px) 22px clamp(52px,7vw,92px);display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:clamp(32px,4vw,64px);align-items:center">
-    <div style="display:grid;gap:22px">
-      <span style="display:inline-flex;align-items:center;gap:9px;justify-self:start;background:#E3F2FD;color:#0D47A1;font-family:'Poppins',Helvetica,sans-serif;font-weight:600;font-size:12.5px;letter-spacing:1.4px;text-transform:uppercase;padding:9px 16px;border-radius:4px"><i class="fas fa-shield-halved" style="font-size:12px"></i>Safe. Reliable. Always.</span>
-      <h1 style="margin:0;font-family:'Poppins',Helvetica,sans-serif;font-weight:700;color:#0A2647;font-size:clamp(34px,5.4vw,62px);line-height:1.08;letter-spacing:-1px;text-wrap:pretty">Elevator solutions that move Bangalore, safely</h1>
-      <p style="margin:0;font-size:clamp(16px,1.9vw,19px);line-height:1.75;max-width:34em">V Secure Elevators Pvt. Ltd. handles installation, maintenance, modernization and repair for homes, offices and commercial buildings, with engineering discipline at every step.</p>
-      <div style="display:flex;flex-wrap:wrap;gap:14px;margin-top:4px">
-        <a href="Services.dc.html" style="background:#0D47A1;color:#ffffff;font-family:'Poppins',Helvetica,sans-serif;font-weight:600;font-size:16px;padding:17px 30px;border-radius:4px;text-decoration:none;text-align:center;flex:1 1 200px;max-width:250px" style-hover="background:#1976D2">Our Services</a>
-        <a href="Contact-Us.dc.html" style="background:#ffffff;border:1px solid #C9D6E2;color:#0D47A1;font-family:'Poppins',Helvetica,sans-serif;font-weight:600;font-size:16px;padding:17px 30px;border-radius:4px;text-decoration:none;text-align:center;flex:1 1 200px;max-width:250px" style-hover="border-color:#0D47A1;background:#E3F2FD">Contact Us</a>
+<dc-import name="SiteNav" active="home" hint-size="100%,74px"></dc-import>
+
+<section aria-label="Hero" style="position:relative;min-height:clamp(560px,92vh,960px);display:grid;align-content:end;padding-bottom:0">
+  <div style="position:absolute;inset:0;background:#0B0B0C;overflow:hidden">
+    <video ref="{{ videoRef }}" src="assets/WhatsApp%20Video%202026-09-01%20at%201.13.01%20PM.mp4" muted="{{ true }}" playsInline="{{ true }}" preload="auto" onEnded="{{ videoEnded }}" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:{{ op0 }};transition:opacity 900ms ease"></video>
+    <video ref="{{ videoRef2 }}" src="assets/WhatsApp%20Video%202026-09-01%20at%201.15.01%20PM.mp4" muted="{{ true }}" playsInline="{{ true }}" preload="auto" onEnded="{{ videoEnded }}" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:{{ op5 }};transition:opacity 900ms ease"></video>
+  </div>
+  <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(11,11,12,0.48) 0%,rgba(11,11,12,0.34) 40%,rgba(11,11,12,0.82) 100%)"></div>
+  <div style="position:relative;width:100%;padding:clamp(120px,18vw,240px) 24px 0 clamp(20px,2vw,40px);display:grid;gap:22px;justify-items:start">
+    <span style="font-size:12.5px;letter-spacing:3.2px;text-transform:uppercase;color:#C6A15B">{{ heroKicker }}</span>
+    <h1 style="margin:0;font-family:'Marcellus',Georgia,serif;font-weight:400;color:#F7F5F1;font-size:clamp(32px,4.8vw,60px);line-height:1.14;letter-spacing:-0.3px;max-width:15em;text-wrap:pretty">{{ heroTitle }}</h1>
+    <p style="margin:0;max-width:34em;font-size:clamp(15.5px,1.6vw,17.5px);line-height:1.8;color:#D3CFC8">{{ heroBody }}</p>
+    <a href="Contact-Us.dc.html" style="background:#C6A15B;color:#0B0B0C;text-decoration:none;font-size:16px;padding:18px 36px;border-radius:999px;margin-top:8px" style-hover="background:#E0C489">Request a Project Consultation</a>
+  </div>
+  <div class="hero-stats" style="position:relative;width:100%;padding:clamp(24px,3.2vw,44px) clamp(20px,2vw,40px) 0;display:flex;z-index:2">
+    <div ref="{{ statsGridRef }}" class="hero-stats-grid" style="background:rgba(9,9,10,0.96);border:1px solid rgba(243,240,234,0.14);border-radius:44px 44px 0 0;box-shadow:0 -18px 50px rgba(0,0,0,0.55);padding:clamp(24px,2.8vw,34px) clamp(26px,3.4vw,46px);display:flex;flex-wrap:wrap;align-items:center;gap:clamp(18px,2.6vw,38px);width:fit-content;max-width:100%">
+      <div class="hero-years" style="position:relative;width:118px;height:118px;flex-shrink:0;display:grid;place-items:center;text-align:center">
+        <span style="position:absolute;inset:0;border-radius:50%;border:1px solid #C6A15B;box-shadow:0 0 16px rgba(233,207,149,0.5),inset 0 0 16px rgba(198,161,91,0.16)"></span>
+        <span class="hero-years-content" style="position:relative;display:grid;gap:4px;justify-items:center">
+          <span style="font-family:'Marcellus',Georgia,serif;background:linear-gradient(180deg,#F0DCAE 0%,#C6A15B 65%,#9C7B3B 100%);-webkit-background-clip:text;background-clip:text;color:transparent;font-size:36px;line-height:1">05</span>
+          <span style="font-size:10px;letter-spacing:2.2px;text-transform:uppercase;color:#F0EDE7;line-height:1.5">Years of<br />service</span>
+        </span>
       </div>
-      <div style="display:flex;flex-wrap:wrap;gap:12px 30px;margin-top:8px;padding-top:22px;border-top:1px solid #DFE7EF">
-        <span style="display:flex;align-items:center;gap:9px;font-size:14.5px"><i class="fas fa-circle-check" style="color:#1976D2"></i>Incorporated 2021</span>
-        <span style="display:flex;align-items:center;gap:9px;font-size:14.5px"><i class="fas fa-circle-check" style="color:#1976D2"></i>Bangalore based team</span>
-        <span style="display:flex;align-items:center;gap:9px;font-size:14.5px"><i class="fas fa-circle-check" style="color:#1976D2"></i>AMC support available</span>
+      <span style="position:relative;width:1px;align-self:stretch;min-height:104px;background:linear-gradient(180deg,rgba(198,161,91,0) 0%,rgba(198,161,91,0.5) 50%,rgba(198,161,91,0) 100%);flex-shrink:0"><span style="position:absolute;left:-1.5px;top:50%;width:4px;height:4px;border-radius:50%;background:#E9CF95;box-shadow:0 0 8px rgba(233,207,149,0.9)"></span></span>
+      <div style="display:grid;gap:9px;justify-items:center;text-align:center">
+        <i class="fas fa-headset" style="color:#C6A15B;font-size:24px;line-height:1"></i>
+        <span style="font-family:'Marcellus',Georgia,serif;background:linear-gradient(180deg,#F0DCAE 0%,#C6A15B 62%,#9C7B3B 100%);-webkit-background-clip:text;background-clip:text;color:transparent;font-size:clamp(28px,3.4vw,42px);line-height:1.05">24/7</span>
+        <span style="font-size:12px;letter-spacing:2.2px;text-transform:uppercase;color:#F0EDE7">AMC support</span>
+        <span style="width:72%;height:1px;background:linear-gradient(90deg,rgba(233,207,149,0) 0%,rgba(233,207,149,0.7) 50%,rgba(233,207,149,0) 100%)"></span>
+      </div>
+      <span style="position:relative;width:1px;align-self:stretch;min-height:104px;background:linear-gradient(180deg,rgba(198,161,91,0) 0%,rgba(198,161,91,0.5) 50%,rgba(198,161,91,0) 100%);flex-shrink:0"><span style="position:absolute;left:-1.5px;top:50%;width:4px;height:4px;border-radius:50%;background:#E9CF95;box-shadow:0 0 8px rgba(233,207,149,0.9)"></span></span>
+      <div style="display:grid;gap:9px;justify-items:center;text-align:center">
+        <i class="fas fa-screwdriver-wrench" style="color:#C6A15B;font-size:24px;line-height:1"></i>
+        <span style="font-family:'Marcellus',Georgia,serif;background:linear-gradient(180deg,#F0DCAE 0%,#C6A15B 62%,#9C7B3B 100%);-webkit-background-clip:text;background-clip:text;color:transparent;font-size:clamp(28px,3.4vw,42px);line-height:1.05">06</span>
+        <span style="font-size:12px;letter-spacing:2.2px;text-transform:uppercase;color:#F0EDE7">Service lines</span>
+        <span style="width:72%;height:1px;background:linear-gradient(90deg,rgba(233,207,149,0) 0%,rgba(233,207,149,0.7) 50%,rgba(233,207,149,0) 100%)"></span>
+      </div>
+      <span style="position:relative;width:1px;align-self:stretch;min-height:104px;background:linear-gradient(180deg,rgba(198,161,91,0) 0%,rgba(198,161,91,0.5) 50%,rgba(198,161,91,0) 100%);flex-shrink:0"><span style="position:absolute;left:-1.5px;top:50%;width:4px;height:4px;border-radius:50%;background:#E9CF95;box-shadow:0 0 8px rgba(233,207,149,0.9)"></span></span>
+      <div style="display:grid;gap:9px;justify-items:center;text-align:center">
+        <i class="fas fa-building" style="color:#C6A15B;font-size:24px;line-height:1"></i>
+        <span style="font-family:'Marcellus',Georgia,serif;background:linear-gradient(180deg,#F0DCAE 0%,#C6A15B 62%,#9C7B3B 100%);-webkit-background-clip:text;background-clip:text;color:transparent;font-size:clamp(28px,3.4vw,42px);line-height:1.05">4+</span>
+        <span style="font-size:12px;letter-spacing:2.2px;text-transform:uppercase;color:#F0EDE7">Client organisations</span>
+        <span style="width:72%;height:1px;background:linear-gradient(90deg,rgba(233,207,149,0) 0%,rgba(233,207,149,0.7) 50%,rgba(233,207,149,0) 100%)"></span>
       </div>
     </div>
-    <div style="position:relative">
-      <img src="https://images.unsplash.com/photo-1758448721149-aa0ce8e1b2c9?auto=format&amp;fit=crop&amp;w=1400&amp;q=72" alt="Modern building lobby with stainless steel elevator doors" style="width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:26px;display:block;box-shadow:0 26px 60px rgba(10,38,71,0.18)" />
-      <div style="position:absolute;left:-6px;bottom:26px;background:#ffffff;border-radius:18px;padding:20px 24px;box-shadow:0 18px 40px rgba(10,38,71,0.16);display:grid;gap:4px;max-width:230px">
-        <span style="font-family:'Poppins',Helvetica,sans-serif;font-weight:700;color:#0D47A1;font-size:26px">24/7</span>
-        <span style="font-size:13.5px;line-height:1.5">Breakdown support for AMC clients</span>
+  </div>
+  <div style="position:absolute;right:max(20px,calc((100vw - 1320px) / 2 + 24px));bottom:20px;z-index:3;display:flex;gap:12px;align-items:center">
+    <button type="button" aria-label="Previous slide" onClick="{{ prevHero }}" style="width:54px;height:54px;border-radius:50%;border:1px solid rgba(243,240,234,0.45);background:rgba(11,11,12,0.35);color:#C6A15B;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;padding:0;line-height:1;transition:border-color 200ms ease,color 200ms ease" style-hover="border-color:#C6A15B;color:#E0C489"><span style="font-size:19px;line-height:1">&#8592;</span></button>
+    <button type="button" aria-label="Next slide" onClick="{{ nextHero }}" style="width:54px;height:54px;border-radius:50%;border:1px solid rgba(243,240,234,0.45);background:rgba(11,11,12,0.35);color:#C6A15B;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;padding:0;line-height:1;transition:border-color 200ms ease,color 200ms ease" style-hover="border-color:#C6A15B;color:#E0C489"><span style="font-size:19px;line-height:1">&#8594;</span></button>
+  </div>
+</section>
+
+
+<section aria-label="Marquee" style="border-top:1px solid rgba(198,161,91,0.2);border-bottom:1px solid rgba(198,161,91,0.2);overflow:hidden;background:#0F0F10">
+  <div style="display:flex;width:max-content;animation:vsmarquee 34s linear infinite;padding:20px 0">
+    <div style="display:flex;gap:56px;padding-right:56px;font-family:'Marcellus',Georgia,serif;font-size:17px;letter-spacing:3px;text-transform:uppercase;color:#6E6A63"><span>Installation</span><span style="color:#C6A15B">·</span><span>Maintenance &amp; AMC</span><span style="color:#C6A15B">·</span><span>Modernisation</span><span style="color:#C6A15B">·</span><span>Home Elevators</span><span style="color:#C6A15B">·</span><span>Commercial Elevators</span><span style="color:#C6A15B">·</span><span>Repair</span><span style="color:#C6A15B">·</span></div>
+    <div style="display:flex;gap:56px;padding-right:56px;font-family:'Marcellus',Georgia,serif;font-size:17px;letter-spacing:3px;text-transform:uppercase;color:#6E6A63"><span>Installation</span><span style="color:#C6A15B">·</span><span>Maintenance &amp; AMC</span><span style="color:#C6A15B">·</span><span>Modernisation</span><span style="color:#C6A15B">·</span><span>Home Elevators</span><span style="color:#C6A15B">·</span><span>Commercial Elevators</span><span style="color:#C6A15B">·</span><span>Repair</span><span style="color:#C6A15B">·</span></div>
+  </div>
+</section>
+
+
+
+<section aria-label="What sets us apart" style="padding:clamp(48px,6vw,90px) 0">
+  <div style="max-width:1440px;margin:0 auto;padding:0 24px;display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:clamp(20px,2.4vw,32px);align-items:stretch">
+    <div style="background:#101011;border-radius:34px;padding:clamp(30px,4vw,56px) clamp(24px,3vw,44px);display:grid;gap:clamp(22px,2.6vw,34px);align-content:start">
+      <h2 style="margin:0;font-family:'Marcellus',Georgia,serif;font-weight:400;color:#F7F5F1;font-size:clamp(30px,4.4vw,54px);line-height:1.14">What sets <em style="color:#C6A15B;font-style:italic">V Secure apart</em></h2>
+      <div style="display:grid;gap:clamp(16px,2vw,24px)">
+        <div style="background:#141415;border-bottom-right-radius:44px;padding:clamp(24px,2.6vw,34px) clamp(24px,3vw,40px)">
+          <h3 style="margin:0 0 10px;font-family:'Marcellus',Georgia,serif;font-weight:400;font-size:clamp(18px,2vw,22px);color:#F7F5F1">Documented safety standards</h3>
+          <p style="margin:0;font-size:16px;line-height:1.85;color:#B7B3AB">Safety checks are carried out and recorded on every installation and service visit, so the building owner has a written trail of the condition of the equipment.</p>
+        </div>
+        <div style="background:#141415;border-bottom-right-radius:44px;padding:clamp(24px,2.6vw,34px) clamp(24px,3vw,40px)">
+          <h3 style="margin:0 0 10px;font-family:'Marcellus',Georgia,serif;font-weight:400;font-size:clamp(18px,2vw,22px);color:#F7F5F1">One accountable team</h3>
+          <p style="margin:0;font-size:16px;line-height:1.85;color:#B7B3AB">The engineers who assess the site see the installation through and remain available afterwards under the maintenance contract. Nothing is handed to a third party crew.</p>
+        </div>
+        <div style="background:#141415;border-bottom-right-radius:44px;padding:clamp(24px,2.6vw,34px) clamp(24px,3vw,40px)">
+          <h3 style="margin:0 0 10px;font-family:'Marcellus',Georgia,serif;font-weight:400;font-size:clamp(18px,2vw,22px);color:#F7F5F1">Works on existing equipment</h3>
+          <p style="margin:0;font-size:16px;line-height:1.85;color:#B7B3AB">We take on maintenance, repair and modernisation for elevators we did not install, covering most makes found in Bangalore buildings.</p>
+        </div>
+        <div style="background:#141415;border-bottom-right-radius:44px;padding:clamp(24px,2.6vw,34px) clamp(24px,3vw,40px)">
+          <h3 style="margin:0 0 10px;font-family:'Marcellus',Georgia,serif;font-weight:400;font-size:clamp(18px,2vw,22px);color:#F7F5F1">Direct access to support</h3>
+          <p style="margin:0;font-size:16px;line-height:1.85;color:#B7B3AB">Phone and WhatsApp lines reach the team handling your building, with 24/7 breakdown attendance for clients on an annual maintenance contract.</p>
+        </div>
       </div>
+    </div>
+    <div style="position:relative;width:100%;min-height:clamp(360px,60vh,900px);border-radius:34px;overflow:hidden;background:#0B0B0C">
+      <img src="uploads/WhatsApp%20Image%202026-09-01%20at%201.33.22%20PM.jpeg" alt="Stainless steel elevator cabin with mirror finish panels" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:{{ w0 }};transition:opacity 600ms ease" />
+      <img src="uploads/WhatsApp%20Image%202026-09-01%20at%201.31.00%20PM.jpeg" alt="Gold finish elevator cabin with etched pattern panels" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:{{ w1 }};transition:opacity 600ms ease" />
+      <img src="uploads/WhatsApp%20Image%202026-09-01%20at%201.30.39%20PM.jpeg" alt="Gold elevator cabin interior with touch control panel" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:{{ w2 }};transition:opacity 600ms ease" />
+      <img src="uploads/WhatsApp%20Image%202026-09-01%20at%201.32.35%20PM.jpeg" alt="Elevator cabin with brushed steel walls and handrail" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:{{ w3 }};transition:opacity 600ms ease" />
+      <img src="uploads/WhatsApp%20Image%202026-09-01%20at%201.26.45%20PM.jpeg" alt="Modern elevator cabin with black and steel panels" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:{{ w4 }};transition:opacity 600ms ease" />
+      <img src="uploads/WhatsApp%20Image%202026-09-01%20at%201.33.01%20PM.jpeg" alt="Home elevator cabin with decorative ceiling and etched panels" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:{{ w5 }};transition:opacity 600ms ease" />
     </div>
   </div>
 </section>
 
-<section aria-label="Company facts" style="background:#0A2647">
-  <div style="max-width:1240px;margin:0 auto;padding:clamp(34px,4vw,52px) 22px;display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:28px">
-    <div style="display:grid;gap:6px"><span style="font-family:'Poppins',Helvetica,sans-serif;font-weight:700;color:#ffffff;font-size:clamp(26px,3.4vw,36px)">2021</span><span style="color:#9FB8D6;font-size:14.5px">Year incorporated in Bangalore</span></div>
-    <div style="display:grid;gap:6px"><span style="font-family:'Poppins',Helvetica,sans-serif;font-weight:700;color:#ffffff;font-size:clamp(26px,3.4vw,36px)">6</span><span style="color:#9FB8D6;font-size:14.5px">Core service categories</span></div>
-    <div style="display:grid;gap:6px"><span style="font-family:'Poppins',Helvetica,sans-serif;font-weight:700;color:#ffffff;font-size:clamp(26px,3.4vw,36px)">4+</span><span style="color:#9FB8D6;font-size:14.5px">Client organizations served</span></div>
-    <div style="display:grid;gap:6px"><span style="font-family:'Poppins',Helvetica,sans-serif;font-weight:700;color:#ffffff;font-size:clamp(26px,3.4vw,36px)">1 day</span><span style="color:#9FB8D6;font-size:14.5px">Typical enquiry response time</span></div>
+<section id="range" aria-label="Elevator range" style="background:#0F0F10;border-top:1px solid rgba(198,161,91,0.2);overflow:hidden">
+  <div style="padding:clamp(56px,7vw,110px) 0;display:grid;gap:clamp(30px,4vw,52px)">
+    <h2 style="margin:0;text-align:center;padding:0 24px;font-family:'Marcellus',Georgia,serif;font-weight:400;color:#F7F5F1;font-size:clamp(26px,3.8vw,48px);line-height:1.18">Our <em style="color:#C6A15B;font-style:italic">elevator range for homes and commercial buildings</em></h2>
+    <a href="Contact-Us.dc.html" style="justify-self:center;background:#C6A15B;color:#0B0B0C;text-decoration:none;font-size:13px;letter-spacing:1.8px;text-transform:uppercase;padding:15px 30px;border-radius:999px" style-hover="background:#E0C489">Get a Quote</a>
+    <div style="position:relative;padding:0 clamp(44px,5vw,72px)">
+      <div style="overflow:hidden">
+        <div style="display:flex;gap:clamp(14px,1.8vw,26px);transform:{{ rTrack }};transition:transform 700ms cubic-bezier(0.4,0,0.2,1);will-change:transform">
+        <article style="position:relative;flex:0 0 clamp(260px,31.5%,440px);border-radius:30px;overflow:hidden;background:#141415;outline:1px solid rgba(243,240,234,0.08);outline-offset:-1px;transition:transform 400ms ease,outline-color 400ms ease" style-hover="transform:translateY(-8px);outline-color:#C6A15B">
+          <img src="uploads/WhatsApp%20Image%202026-09-01%20at%201.32.45%20PM.jpeg" alt="Commercial elevator cabin with wood finish walls and handrails" style="width:100%;height:clamp(420px,66vh,720px);object-fit:cover;display:block" />
+          <div style="position:absolute;inset:0;padding:clamp(24px,3vw,38px);display:grid;align-content:end;gap:12px;justify-items:start;background:linear-gradient(180deg,rgba(11,11,12,0) 35%,rgba(11,11,12,0.92) 100%);opacity:0;transition:opacity 400ms ease" style-hover="opacity:1">
+            <h3 style="margin:0;font-family:'Marcellus',Georgia,serif;font-weight:400;font-size:clamp(20px,2.4vw,27px);color:#F7F5F1;line-height:1.2">Passenger Elevators</h3>
+            <p style="margin:0;font-size:15px;line-height:1.75;color:#CFCBC4;max-width:26em">Everyday vertical transport for apartments and office buildings, specified around floor count and daily traffic.</p>
+            <a href="Contact-Us.dc.html" style="background:#C6A15B;color:#0B0B0C;text-decoration:none;font-size:12.5px;letter-spacing:2px;text-transform:uppercase;padding:14px 22px;border-radius:999px;margin-top:4px" style-hover="background:#E0C489">Get quote</a>
+          </div>
+        </article>
+        <article style="position:relative;flex:0 0 clamp(260px,31.5%,440px);border-radius:30px;overflow:hidden;background:#141415;outline:1px solid rgba(243,240,234,0.08);outline-offset:-1px;transition:transform 400ms ease,outline-color 400ms ease" style-hover="transform:translateY(-8px);outline-color:#C6A15B">
+          <img src="uploads/WhatsApp%20Image%202026-09-01%20at%201.33.01%20PM.jpeg" alt="Home elevator cabin with decorative ceiling and etched panels" style="width:100%;height:clamp(420px,66vh,720px);object-fit:cover;display:block" />
+          <div style="position:absolute;inset:0;padding:clamp(24px,3vw,38px);display:grid;align-content:end;gap:12px;justify-items:start;background:linear-gradient(180deg,rgba(11,11,12,0) 35%,rgba(11,11,12,0.92) 100%);opacity:0;transition:opacity 400ms ease" style-hover="opacity:1">
+            <h3 style="margin:0;font-family:'Marcellus',Georgia,serif;font-weight:400;font-size:clamp(20px,2.4vw,27px);color:#F7F5F1;line-height:1.2">Home Elevators</h3>
+            <p style="margin:0;font-size:15px;line-height:1.75;color:#CFCBC4;max-width:26em">Compact residential lifts for villas and duplexes, fitted into tight shafts and stairwell openings.</p>
+            <a href="Contact-Us.dc.html" style="background:#C6A15B;color:#0B0B0C;text-decoration:none;font-size:12.5px;letter-spacing:2px;text-transform:uppercase;padding:14px 22px;border-radius:999px;margin-top:4px" style-hover="background:#E0C489">Get quote</a>
+          </div>
+        </article>
+        <article style="position:relative;flex:0 0 clamp(260px,31.5%,440px);border-radius:30px;overflow:hidden;background:#141415;outline:1px solid rgba(243,240,234,0.08);outline-offset:-1px;transition:transform 400ms ease,outline-color 400ms ease" style-hover="transform:translateY(-8px);outline-color:#C6A15B">
+          <img src="uploads/WhatsApp%20Image%202026-09-01%20at%201.26.45%20PM.jpeg" alt="Modern elevator cabin with black and steel panels" style="width:100%;height:clamp(420px,66vh,720px);object-fit:cover;display:block" />
+          <div style="position:absolute;inset:0;padding:clamp(24px,3vw,38px);display:grid;align-content:end;gap:12px;justify-items:start;background:linear-gradient(180deg,rgba(11,11,12,0) 35%,rgba(11,11,12,0.92) 100%);opacity:0;transition:opacity 400ms ease" style-hover="opacity:1">
+            <h3 style="margin:0;font-family:'Marcellus',Georgia,serif;font-weight:400;font-size:clamp(20px,2.4vw,27px);color:#F7F5F1;line-height:1.2">Commercial Elevators</h3>
+            <p style="margin:0;font-size:15px;line-height:1.75;color:#CFCBC4;max-width:26em">Higher capacity units for offices, malls, hospitals and institutional buildings with heavy daily use.</p>
+            <a href="Contact-Us.dc.html" style="background:#C6A15B;color:#0B0B0C;text-decoration:none;font-size:12.5px;letter-spacing:2px;text-transform:uppercase;padding:14px 22px;border-radius:999px;margin-top:4px" style-hover="background:#E0C489">Get quote</a>
+          </div>
+        </article>
+        <article style="position:relative;flex:0 0 clamp(260px,31.5%,440px);border-radius:30px;overflow:hidden;background:#141415;outline:1px solid rgba(243,240,234,0.08);outline-offset:-1px;transition:transform 400ms ease,outline-color 400ms ease" style-hover="transform:translateY(-8px);outline-color:#C6A15B">
+          <img src="uploads/WhatsApp%20Image%202026-09-01%20at%201.33.12%20PM.jpeg" alt="Elevator cabin with green wall panels and stainless handrail" style="width:100%;height:clamp(420px,66vh,720px);object-fit:cover;display:block" />
+          <div style="position:absolute;inset:0;padding:clamp(24px,3vw,38px);display:grid;align-content:end;gap:12px;justify-items:start;background:linear-gradient(180deg,rgba(11,11,12,0) 35%,rgba(11,11,12,0.92) 100%);opacity:0;transition:opacity 400ms ease" style-hover="opacity:1">
+            <h3 style="margin:0;font-family:'Marcellus',Georgia,serif;font-weight:400;font-size:clamp(20px,2.4vw,27px);color:#F7F5F1;line-height:1.2">Goods Elevators</h3>
+            <p style="margin:0;font-size:15px;line-height:1.75;color:#CFCBC4;max-width:26em">Freight and service lifts for warehouses, factories and retail back of house movement.</p>
+            <a href="Contact-Us.dc.html" style="background:#C6A15B;color:#0B0B0C;text-decoration:none;font-size:12.5px;letter-spacing:2px;text-transform:uppercase;padding:14px 22px;border-radius:999px;margin-top:4px" style-hover="background:#E0C489">Get quote</a>
+          </div>
+        </article>
+        <article style="position:relative;flex:0 0 clamp(260px,31.5%,440px);border-radius:30px;overflow:hidden;background:#141415;outline:1px solid rgba(243,240,234,0.08);outline-offset:-1px;transition:transform 400ms ease,outline-color 400ms ease" style-hover="transform:translateY(-8px);outline-color:#C6A15B">
+          <img src="uploads/WhatsApp%20Image%202026-09-01%20at%201.31.00%20PM.jpeg" alt="Gold finish elevator cabin with etched pattern panels" style="width:100%;height:clamp(420px,66vh,720px);object-fit:cover;display:block" />
+          <div style="position:absolute;inset:0;padding:clamp(24px,3vw,38px);display:grid;align-content:end;gap:12px;justify-items:start;background:linear-gradient(180deg,rgba(11,11,12,0) 35%,rgba(11,11,12,0.92) 100%);opacity:0;transition:opacity 400ms ease" style-hover="opacity:1">
+            <h3 style="margin:0;font-family:'Marcellus',Georgia,serif;font-weight:400;font-size:clamp(20px,2.4vw,27px);color:#F7F5F1;line-height:1.2">Premium Finishes</h3>
+            <p style="margin:0;font-size:15px;line-height:1.75;color:#CFCBC4;max-width:26em">Etched, mirror and gold finish cabins specified where the lobby is part of the building’s identity.</p>
+            <a href="Contact-Us.dc.html" style="background:#C6A15B;color:#0B0B0C;text-decoration:none;font-size:12.5px;letter-spacing:2px;text-transform:uppercase;padding:14px 22px;border-radius:999px;margin-top:4px" style-hover="background:#E0C489">Get quote</a>
+          </div>
+        </article>
+        <article style="position:relative;flex:0 0 clamp(260px,31.5%,440px);border-radius:30px;overflow:hidden;background:#141415;outline:1px solid rgba(243,240,234,0.08);outline-offset:-1px;transition:transform 400ms ease,outline-color 400ms ease" style-hover="transform:translateY(-8px);outline-color:#C6A15B">
+          <img src="uploads/WhatsApp%20Image%202026-09-01%20at%201.32.35%20PM.jpeg" alt="Elevator cabin with brushed steel walls and handrail" style="width:100%;height:clamp(420px,66vh,720px);object-fit:cover;display:block" />
+          <div style="position:absolute;inset:0;padding:clamp(24px,3vw,38px);display:grid;align-content:end;gap:12px;justify-items:start;background:linear-gradient(180deg,rgba(11,11,12,0) 35%,rgba(11,11,12,0.92) 100%);opacity:0;transition:opacity 400ms ease" style-hover="opacity:1">
+            <h3 style="margin:0;font-family:'Marcellus',Georgia,serif;font-weight:400;font-size:clamp(20px,2.4vw,27px);color:#F7F5F1;line-height:1.2">Hospital &amp; Stretcher Lifts</h3>
+            <p style="margin:0;font-size:15px;line-height:1.75;color:#CFCBC4;max-width:26em">Deep cars with wide openings for stretcher and equipment movement in healthcare buildings.</p>
+            <a href="Contact-Us.dc.html" style="background:#C6A15B;color:#0B0B0C;text-decoration:none;font-size:12.5px;letter-spacing:2px;text-transform:uppercase;padding:14px 22px;border-radius:999px;margin-top:4px" style-hover="background:#E0C489">Get quote</a>
+          </div>
+        </article>
+        </div>
+      </div>
+      <button type="button" aria-label="Previous elevator" onClick="{{ rPrev }}" style="position:absolute;left:6px;top:50%;transform:translateY(-50%);width:44px;height:44px;border-radius:50%;border:0;background:rgba(11,11,12,0.75);color:#F3F0EA;font-size:16px;cursor:pointer" style-hover="color:#C6A15B"><i class="fas fa-chevron-left"></i></button>
+      <button type="button" aria-label="Next elevator" onClick="{{ rNext }}" style="position:absolute;right:6px;top:50%;transform:translateY(-50%);width:44px;height:44px;border-radius:50%;border:0;background:rgba(11,11,12,0.75);color:#F3F0EA;font-size:16px;cursor:pointer" style-hover="color:#C6A15B"><i class="fas fa-chevron-right"></i></button>
+    </div>
   </div>
 </section>
 
-<section aria-label="About the company" style="max-width:1240px;margin:0 auto;padding:clamp(58px,8vw,110px) 22px;display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:clamp(32px,4.5vw,68px);align-items:center">
-  <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
-    <img src="https://images.unsplash.com/photo-1723941075231-1df166c85809?auto=format&amp;fit=crop&amp;w=800&amp;q=70" alt="Glass atrium of a commercial building with vertical transport" style="width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:20px;display:block" />
-    <img src="https://images.unsplash.com/photo-1774801890542-c875dab300ea?auto=format&amp;fit=crop&amp;w=800&amp;q=70" alt="Person inside a modern glass elevator" style="width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:20px;display:block;margin-top:34px" />
+<dc-import name="ProjectPortfolio" hint-size="100%,640px"></dc-import>
+
+<dc-import name="WorkInMotion" hint-size="100%,720px"></dc-import>
+
+<section aria-label="How we work" style="max-width:1320px;margin:0 auto;padding:clamp(70px,9vw,130px) 24px;display:grid;gap:48px">
+  <div style="display:grid;gap:22px;max-width:34em">
+    <span style="display:flex;align-items:center;gap:14px;color:#C6A15B;font-size:12.5px;letter-spacing:3.4px;text-transform:uppercase"><span style="width:44px;height:1px;background:#C6A15B"></span>Process</span>
+    <h2 style="margin:0;font-family:'Marcellus',Georgia,serif;font-weight:400;color:#F7F5F1;font-size:clamp(30px,4.4vw,54px);line-height:1.14">From enquiry to <em style="color:#C6A15B;font-style:italic">handover</em></h2>
   </div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:30px">
+    <div style="display:grid;gap:14px;padding-top:24px;border-top:1px solid rgba(198,161,91,0.45)"><span style="font-family:'Marcellus',Georgia,serif;color:#C6A15B;font-size:15px;letter-spacing:2px">STEP 01</span><h3 style="margin:0;font-family:'Marcellus',Georgia,serif;font-weight:400;font-size:20px;color:#F7F5F1">Site assessment</h3><p style="margin:0;font-size:15px;line-height:1.8;color:#A8A49C">We visit the building, measure the shaft and understand traffic needs.</p></div>
+    <div style="display:grid;gap:14px;padding-top:24px;border-top:1px solid rgba(198,161,91,0.45)"><span style="font-family:'Marcellus',Georgia,serif;color:#C6A15B;font-size:15px;letter-spacing:2px">STEP 02</span><h3 style="margin:0;font-family:'Marcellus',Georgia,serif;font-weight:400;font-size:20px;color:#F7F5F1">Written proposal</h3><p style="margin:0;font-size:15px;line-height:1.8;color:#A8A49C">A clear quote covering equipment, scope of work and timelines.</p></div>
+    <div style="display:grid;gap:14px;padding-top:24px;border-top:1px solid rgba(198,161,91,0.45)"><span style="font-family:'Marcellus',Georgia,serif;color:#C6A15B;font-size:15px;letter-spacing:2px">STEP 03</span><h3 style="margin:0;font-family:'Marcellus',Georgia,serif;font-weight:400;font-size:20px;color:#F7F5F1">Installation</h3><p style="margin:0;font-size:15px;line-height:1.8;color:#A8A49C">Our engineers install, test and hand over with documentation.</p></div>
+    <div style="display:grid;gap:14px;padding-top:24px;border-top:1px solid rgba(198,161,91,0.45)"><span style="font-family:'Marcellus',Georgia,serif;color:#C6A15B;font-size:15px;letter-spacing:2px">STEP 04</span><h3 style="margin:0;font-family:'Marcellus',Georgia,serif;font-weight:400;font-size:20px;color:#F7F5F1">Ongoing support</h3><p style="margin:0;font-size:15px;line-height:1.8;color:#A8A49C">Planned maintenance visits and breakdown support under an AMC.</p></div>
+  </div>
+</section>
+
+<section id="solutions" aria-label="Our solutions" style="max-width:1320px;margin:0 auto;padding:clamp(70px,9vw,130px) 24px clamp(30px,4vw,50px);display:grid;gap:26px">
+  <span style="display:flex;align-items:center;gap:14px;color:#C6A15B;font-size:12.5px;letter-spacing:3.4px;text-transform:uppercase"><span style="width:44px;height:1px;background:#C6A15B"></span>What we do</span>
+  <h2 style="margin:0;font-family:'Marcellus',Georgia,serif;font-weight:400;color:#F7F5F1;font-size:clamp(30px,4.4vw,54px);line-height:1.14;max-width:24em">Our <em style="color:#C6A15B;font-style:italic">Solutions</em></h2>
+</section>
+
+<section aria-label="Solution: installation" style="max-width:1320px;margin:0 auto;padding:clamp(24px,3vw,40px) 24px;display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:clamp(30px,4vw,70px);align-items:center">
+  <img src="uploads/WhatsApp%20Image%202026-09-01%20at%201.29.38%20PM.jpeg" alt="Elevator shaft with guide rails and landing doors during installation" style="width:100%;aspect-ratio:3/4;object-fit:cover;display:block" />
   <div style="display:grid;gap:20px">
-    <span style="display:flex;align-items:center;gap:10px;color:#1976D2;font-family:'Poppins',Helvetica,sans-serif;font-weight:600;letter-spacing:1.6px;font-size:12.5px;text-transform:uppercase"><span style="width:8px;height:8px;border-radius:50%;background:#1976D2"></span>About the company</span>
-    <h2 style="margin:0;font-family:'Poppins',Helvetica,sans-serif;font-weight:700;color:#0A2647;font-size:clamp(27px,3.8vw,42px);line-height:1.18;letter-spacing:-0.5px">A Bangalore elevator company built on engineering discipline</h2>
-    <p style="margin:0;font-size:16.5px;line-height:1.8">Incorporated in 2021 and headquartered in Bangalore, Karnataka, we are a growing elevator solutions provider working across installation, maintenance, modernization and repair for residential, commercial and institutional buildings.</p>
-    <div style="display:grid;gap:14px">
-      <div style="display:flex;gap:13px;align-items:flex-start"><i class="fas fa-circle-check" style="color:#1976D2;margin-top:4px"></i><p style="margin:0;font-size:15.5px;line-height:1.7">Every project starts with a site assessment, not a catalogue.</p></div>
-      <div style="display:flex;gap:13px;align-items:flex-start"><i class="fas fa-circle-check" style="color:#1976D2;margin-top:4px"></i><p style="margin:0;font-size:15.5px;line-height:1.7">Safety checks are documented before handover.</p></div>
-      <div style="display:flex;gap:13px;align-items:flex-start"><i class="fas fa-circle-check" style="color:#1976D2;margin-top:4px"></i><p style="margin:0;font-size:15.5px;line-height:1.7">Maintenance contracts keep equipment running well after installation.</p></div>
-    </div>
-    <a href="About-Us.dc.html" style="justify-self:start;display:inline-flex;align-items:center;gap:10px;color:#0D47A1;font-family:'Poppins',Helvetica,sans-serif;font-weight:600;font-size:15.5px;text-decoration:none;background:#F4F7FB;padding:14px 24px;border-radius:4px" style-hover="background:#E3F2FD">Learn more about us <i class="fas fa-arrow-right" style="font-size:13px"></i></a>
+    <span style="font-size:12.5px;letter-spacing:3.2px;text-transform:uppercase;color:#C6A15B">01 — Installation</span>
+    <h3 style="margin:0;font-family:'Marcellus',Georgia,serif;font-weight:400;color:#F7F5F1;font-size:clamp(24px,3vw,36px);line-height:1.2">Elevator Installation &amp; Commissioning</h3>
+    <p style="margin:0;font-size:16.5px;line-height:1.9;color:#B7B3AB">Passenger, goods and home elevators installed from shaft preparation through wiring, testing and commissioning. Every project begins with a site assessment rather than a catalogue, and safety checks are documented before handover.</p>
+    <a href="Contact-Us.dc.html" style="justify-self:start;display:inline-flex;align-items:center;gap:12px;color:#C6A15B;text-decoration:none;font-size:13px;letter-spacing:2px;text-transform:uppercase;border-bottom:1px solid rgba(198,161,91,0.5);padding-bottom:8px" style-hover="color:#E0C489">Request a project consultation <i class="fas fa-arrow-right" style="font-size:12px"></i></a>
   </div>
 </section>
 
-<section aria-label="Services overview" style="background:#F4F7FB;border-top:1px solid #E7EDF3;border-bottom:1px solid #E7EDF3">
-  <div style="max-width:1240px;margin:0 auto;padding:clamp(58px,8vw,110px) 22px;display:grid;gap:44px">
-    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px;align-items:end">
-      <div style="display:grid;gap:16px">
-        <span style="display:flex;align-items:center;gap:10px;color:#1976D2;font-family:'Poppins',Helvetica,sans-serif;font-weight:600;letter-spacing:1.6px;font-size:12.5px;text-transform:uppercase"><span style="width:8px;height:8px;border-radius:50%;background:#1976D2"></span>What we do</span>
-        <h2 style="margin:0;font-family:'Poppins',Helvetica,sans-serif;font-weight:700;color:#0A2647;font-size:clamp(27px,3.8vw,42px);line-height:1.18;letter-spacing:-0.5px">Six services, one accountable team</h2>
-      </div>
-      <p style="margin:0;font-size:16.5px;line-height:1.8">From a new installation to an upgrade on a twenty year old lift, the same engineers see the work through and stay available afterwards.</p>
-    </div>
-    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:22px">
-      <a href="Services.dc.html" style="background:#ffffff;border:1px solid #E7EDF3;border-radius:20px;padding:32px;text-decoration:none;display:grid;gap:14px;color:inherit;align-content:start" style-hover="border-color:#1976D2;transform:translateY(-4px);box-shadow:0 18px 40px rgba(13,71,161,0.1)">
-        <span style="width:52px;height:52px;border-radius:16px;background:#E3F2FD;color:#0D47A1;display:flex;align-items:center;justify-content:center;font-size:21px"><i class="fas fa-elevator"></i></span>
-        <h3 style="margin:0;font-family:'Poppins',Helvetica,sans-serif;font-size:19px;color:#0A2647">Elevator Installation</h3>
-        <p style="margin:0;font-size:15px;line-height:1.7">Passenger, goods and home elevators installed from shaft preparation to commissioning.</p>
-      </a>
-      <a href="Services.dc.html" style="background:#ffffff;border:1px solid #E7EDF3;border-radius:20px;padding:32px;text-decoration:none;display:grid;gap:14px;color:inherit;align-content:start" style-hover="border-color:#1976D2;transform:translateY(-4px);box-shadow:0 18px 40px rgba(13,71,161,0.1)">
-        <span style="width:52px;height:52px;border-radius:16px;background:#E3F2FD;color:#0D47A1;display:flex;align-items:center;justify-content:center;font-size:21px"><i class="fas fa-screwdriver-wrench"></i></span>
-        <h3 style="margin:0;font-family:'Poppins',Helvetica,sans-serif;font-size:19px;color:#0A2647">Maintenance &amp; AMC</h3>
-        <p style="margin:0;font-size:15px;line-height:1.7">Scheduled servicing, inspections and annual maintenance contracts.</p>
-      </a>
-      <a href="Services.dc.html" style="background:#ffffff;border:1px solid #E7EDF3;border-radius:20px;padding:32px;text-decoration:none;display:grid;gap:14px;color:inherit;align-content:start" style-hover="border-color:#1976D2;transform:translateY(-4px);box-shadow:0 18px 40px rgba(13,71,161,0.1)">
-        <span style="width:52px;height:52px;border-radius:16px;background:#E3F2FD;color:#0D47A1;display:flex;align-items:center;justify-content:center;font-size:21px"><i class="fas fa-arrow-up-right-dots"></i></span>
-        <h3 style="margin:0;font-family:'Poppins',Helvetica,sans-serif;font-size:19px;color:#0A2647">Modernization</h3>
-        <p style="margin:0;font-size:15px;line-height:1.7">Controls, drives, doors and cabin upgrades for existing elevators.</p>
-      </a>
-      <a href="Services.dc.html" style="background:#ffffff;border:1px solid #E7EDF3;border-radius:20px;padding:32px;text-decoration:none;display:grid;gap:14px;color:inherit;align-content:start" style-hover="border-color:#1976D2;transform:translateY(-4px);box-shadow:0 18px 40px rgba(13,71,161,0.1)">
-        <span style="width:52px;height:52px;border-radius:16px;background:#E3F2FD;color:#0D47A1;display:flex;align-items:center;justify-content:center;font-size:21px"><i class="fas fa-house-chimney"></i></span>
-        <h3 style="margin:0;font-family:'Poppins',Helvetica,sans-serif;font-size:19px;color:#0A2647">Home Elevators</h3>
-        <p style="margin:0;font-size:15px;line-height:1.7">Compact residential lifts for villas and apartments.</p>
-      </a>
-      <a href="Services.dc.html" style="background:#ffffff;border:1px solid #E7EDF3;border-radius:20px;padding:32px;text-decoration:none;display:grid;gap:14px;color:inherit;align-content:start" style-hover="border-color:#1976D2;transform:translateY(-4px);box-shadow:0 18px 40px rgba(13,71,161,0.1)">
-        <span style="width:52px;height:52px;border-radius:16px;background:#E3F2FD;color:#0D47A1;display:flex;align-items:center;justify-content:center;font-size:21px"><i class="fas fa-building"></i></span>
-        <h3 style="margin:0;font-family:'Poppins',Helvetica,sans-serif;font-size:19px;color:#0A2647">Commercial Elevators</h3>
-        <p style="margin:0;font-size:15px;line-height:1.7">Higher capacity elevators for offices, malls and hospitals.</p>
-      </a>
-      <a href="Services.dc.html" style="background:#ffffff;border:1px solid #E7EDF3;border-radius:20px;padding:32px;text-decoration:none;display:grid;gap:14px;color:inherit;align-content:start" style-hover="border-color:#1976D2;transform:translateY(-4px);box-shadow:0 18px 40px rgba(13,71,161,0.1)">
-        <span style="width:52px;height:52px;border-radius:16px;background:#E3F2FD;color:#0D47A1;display:flex;align-items:center;justify-content:center;font-size:21px"><i class="fas fa-toolbox"></i></span>
-        <h3 style="margin:0;font-family:'Poppins',Helvetica,sans-serif;font-size:19px;color:#0A2647">Repair Services</h3>
-        <p style="margin:0;font-size:15px;line-height:1.7">Door faults, levelling issues and control problems resolved quickly.</p>
-      </a>
-    </div>
-  </div>
-</section>
-
-<section aria-label="Why choose us" style="max-width:1240px;margin:0 auto;padding:clamp(58px,8vw,110px) 22px;display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:clamp(32px,4.5vw,68px);align-items:center">
+<section aria-label="Solution: maintenance" style="max-width:1320px;margin:0 auto;padding:clamp(24px,3vw,40px) 24px;display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:clamp(30px,4vw,70px);align-items:center">
   <div style="display:grid;gap:20px">
-    <span style="display:flex;align-items:center;gap:10px;color:#1976D2;font-family:'Poppins',Helvetica,sans-serif;font-weight:600;letter-spacing:1.6px;font-size:12.5px;text-transform:uppercase"><span style="width:8px;height:8px;border-radius:50%;background:#1976D2"></span>Why choose us</span>
-    <h2 style="margin:0;font-family:'Poppins',Helvetica,sans-serif;font-weight:700;color:#0A2647;font-size:clamp(27px,3.8vw,42px);line-height:1.18;letter-spacing:-0.5px">Reasons clients stay with us</h2>
-    <p style="margin:0;font-size:16.5px;line-height:1.8">Elevators are long term assets. Our work is judged over years of daily use, so we build for reliability first.</p>
-    <img src="https://images.unsplash.com/photo-1775880306367-a6de8a01f91b?auto=format&amp;fit=crop&amp;w=1000&amp;q=70" alt="Modern stainless steel elevator doors" style="width:100%;aspect-ratio:16/10;object-fit:cover;border-radius:22px;display:block;margin-top:6px" />
+    <span style="font-size:12.5px;letter-spacing:3.2px;text-transform:uppercase;color:#C6A15B">02 — Maintenance</span>
+    <h3 style="margin:0;font-family:'Marcellus',Georgia,serif;font-weight:400;color:#F7F5F1;font-size:clamp(24px,3vw,36px);line-height:1.2">Elevator Maintenance &amp; AMC Services</h3>
+    <p style="margin:0;font-size:16.5px;line-height:1.9;color:#B7B3AB">Scheduled servicing, inspections, lubrication and adjustments under annual maintenance contracts, with priority attention for breakdown calls. AMC clients reach our engineers directly by phone or WhatsApp.</p>
+    <a href="Contact-Us.dc.html" style="justify-self:start;display:inline-flex;align-items:center;gap:12px;color:#C6A15B;text-decoration:none;font-size:13px;letter-spacing:2px;text-transform:uppercase;border-bottom:1px solid rgba(198,161,91,0.5);padding-bottom:8px" style-hover="color:#E0C489">Request a project consultation <i class="fas fa-arrow-right" style="font-size:12px"></i></a>
   </div>
-  <div style="display:grid;gap:18px">
-    <div style="background:#ffffff;border:1px solid #E7EDF3;border-radius:18px;padding:26px;display:flex;gap:18px;align-items:flex-start">
-      <span style="width:46px;height:46px;flex-shrink:0;border-radius:14px;background:#0D47A1;color:#ffffff;display:flex;align-items:center;justify-content:center;font-size:18px"><i class="fas fa-certificate"></i></span>
-      <div><h3 style="margin:0 0 6px;font-family:'Poppins',Helvetica,sans-serif;font-size:17.5px;color:#0A2647">Safety standards</h3><p style="margin:0;font-size:15px;line-height:1.7">Documented safety checks on every installation and service visit.</p></div>
-    </div>
-    <div style="background:#ffffff;border:1px solid #E7EDF3;border-radius:18px;padding:26px;display:flex;gap:18px;align-items:flex-start">
-      <span style="width:46px;height:46px;flex-shrink:0;border-radius:14px;background:#0D47A1;color:#ffffff;display:flex;align-items:center;justify-content:center;font-size:18px"><i class="fas fa-people-group"></i></span>
-      <div><h3 style="margin:0 0 6px;font-family:'Poppins',Helvetica,sans-serif;font-size:17.5px;color:#0A2647">Experienced team</h3><p style="margin:0;font-size:15px;line-height:1.7">Engineers and technicians with hands on elevator experience.</p></div>
-    </div>
-    <div style="background:#ffffff;border:1px solid #E7EDF3;border-radius:18px;padding:26px;display:flex;gap:18px;align-items:flex-start">
-      <span style="width:46px;height:46px;flex-shrink:0;border-radius:14px;background:#0D47A1;color:#ffffff;display:flex;align-items:center;justify-content:center;font-size:18px"><i class="fas fa-headset"></i></span>
-      <div><h3 style="margin:0 0 6px;font-family:'Poppins',Helvetica,sans-serif;font-size:17.5px;color:#0A2647">Reliable support</h3><p style="margin:0;font-size:15px;line-height:1.7">Direct phone and WhatsApp access when something needs attention.</p></div>
-    </div>
-    <div style="background:#ffffff;border:1px solid #E7EDF3;border-radius:18px;padding:26px;display:flex;gap:18px;align-items:flex-start">
-      <span style="width:46px;height:46px;flex-shrink:0;border-radius:14px;background:#0D47A1;color:#ffffff;display:flex;align-items:center;justify-content:center;font-size:18px"><i class="fas fa-handshake"></i></span>
-      <div><h3 style="margin:0 0 6px;font-family:'Poppins',Helvetica,sans-serif;font-size:17.5px;color:#0A2647">Client trust</h3><p style="margin:0;font-size:15px;line-height:1.7">Long term relationships with businesses and institutions in Bangalore.</p></div>
-    </div>
+  <img src="uploads/WhatsApp%20Image%202026-09-01%20at%201.30.07%20PM.jpeg" alt="Gearless traction machine on its support frame" style="width:100%;aspect-ratio:3/4;object-fit:cover;display:block" />
+</section>
+
+<section aria-label="Solution: modernisation" style="max-width:1320px;margin:0 auto;padding:clamp(24px,3vw,40px) 24px;display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:clamp(30px,4vw,70px);align-items:center">
+  <img src="uploads/WhatsApp%20Image%202026-09-01%20at%201.31.00%20PM.jpeg" alt="Gold finish elevator cabin with etched pattern panels" style="width:100%;aspect-ratio:3/4;object-fit:cover;display:block" />
+  <div style="display:grid;gap:20px">
+    <span style="font-size:12.5px;letter-spacing:3.2px;text-transform:uppercase;color:#C6A15B">03 — Modernisation</span>
+    <h3 style="margin:0;font-family:'Marcellus',Georgia,serif;font-weight:400;color:#F7F5F1;font-size:clamp(24px,3vw,36px);line-height:1.2">Modernisation &amp; Upgrade Services</h3>
+    <p style="margin:0;font-size:16.5px;line-height:1.9;color:#B7B3AB">Controls, drives, doors and cabin interiors upgraded on existing elevators of most makes. Older equipment is brought up to current safety and comfort standards with minimal downtime for the building.</p>
+    <a href="Contact-Us.dc.html" style="justify-self:start;display:inline-flex;align-items:center;gap:12px;color:#C6A15B;text-decoration:none;font-size:13px;letter-spacing:2px;text-transform:uppercase;border-bottom:1px solid rgba(198,161,91,0.5);padding-bottom:8px" style-hover="color:#E0C489">Request a project consultation <i class="fas fa-arrow-right" style="font-size:12px"></i></a>
   </div>
 </section>
 
-<section aria-label="How we work" style="background:#0A2647">
-  <div style="max-width:1240px;margin:0 auto;padding:clamp(58px,8vw,104px) 22px;display:grid;gap:44px">
-    <div style="display:grid;gap:16px;max-width:40em">
-      <span style="display:flex;align-items:center;gap:10px;color:#7BB4F5;font-family:'Poppins',Helvetica,sans-serif;font-weight:600;letter-spacing:1.6px;font-size:12.5px;text-transform:uppercase"><span style="width:8px;height:8px;border-radius:50%;background:#7BB4F5"></span>How we work</span>
-      <h2 style="margin:0;font-family:'Poppins',Helvetica,sans-serif;font-weight:700;color:#ffffff;font-size:clamp(27px,3.8vw,42px);line-height:1.18;letter-spacing:-0.5px">Four steps from enquiry to handover</h2>
-    </div>
-    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:26px">
-      <div style="display:grid;gap:12px;padding-top:22px;border-top:2px solid #1E4B80"><span style="font-family:'Poppins',Helvetica,sans-serif;font-weight:700;color:#7BB4F5;font-size:15px">Step 01</span><h3 style="margin:0;font-family:'Poppins',Helvetica,sans-serif;font-size:18px;color:#ffffff">Site assessment</h3><p style="margin:0;color:#9FB8D6;font-size:15px;line-height:1.7">We visit the building, measure the shaft and understand traffic needs.</p></div>
-      <div style="display:grid;gap:12px;padding-top:22px;border-top:2px solid #1E4B80"><span style="font-family:'Poppins',Helvetica,sans-serif;font-weight:700;color:#7BB4F5;font-size:15px">Step 02</span><h3 style="margin:0;font-family:'Poppins',Helvetica,sans-serif;font-size:18px;color:#ffffff">Written proposal</h3><p style="margin:0;color:#9FB8D6;font-size:15px;line-height:1.7">A clear quote covering equipment, scope of work and timelines.</p></div>
-      <div style="display:grid;gap:12px;padding-top:22px;border-top:2px solid #1E4B80"><span style="font-family:'Poppins',Helvetica,sans-serif;font-weight:700;color:#7BB4F5;font-size:15px">Step 03</span><h3 style="margin:0;font-family:'Poppins',Helvetica,sans-serif;font-size:18px;color:#ffffff">Installation</h3><p style="margin:0;color:#9FB8D6;font-size:15px;line-height:1.7">Our engineers install, test and hand over with documentation.</p></div>
-      <div style="display:grid;gap:12px;padding-top:22px;border-top:2px solid #1E4B80"><span style="font-family:'Poppins',Helvetica,sans-serif;font-weight:700;color:#7BB4F5;font-size:15px">Step 04</span><h3 style="margin:0;font-family:'Poppins',Helvetica,sans-serif;font-size:18px;color:#ffffff">Ongoing support</h3><p style="margin:0;color:#9FB8D6;font-size:15px;line-height:1.7">Planned maintenance visits and service support under an AMC.</p></div>
-    </div>
+<section aria-label="Solution: repair" style="max-width:1320px;margin:0 auto;padding:clamp(24px,3vw,40px) 24px clamp(70px,9vw,120px);display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:clamp(30px,4vw,70px);align-items:center">
+  <div style="display:grid;gap:20px">
+    <span style="font-size:12.5px;letter-spacing:3.2px;text-transform:uppercase;color:#C6A15B">04 — Repair</span>
+    <h3 style="margin:0;font-family:'Marcellus',Georgia,serif;font-weight:400;color:#F7F5F1;font-size:clamp(24px,3vw,36px);line-height:1.2">Repair &amp; Breakdown Attendance</h3>
+    <p style="margin:0;font-size:16.5px;line-height:1.9;color:#B7B3AB">Door faults, levelling issues, control problems and safety trips resolved by engineers who carry common spares. Findings and the work carried out are recorded for the building manager after every visit.</p>
+    <a href="Contact-Us.dc.html" style="justify-self:start;display:inline-flex;align-items:center;gap:12px;color:#C6A15B;text-decoration:none;font-size:13px;letter-spacing:2px;text-transform:uppercase;border-bottom:1px solid rgba(198,161,91,0.5);padding-bottom:8px" style-hover="color:#E0C489">Request a project consultation <i class="fas fa-arrow-right" style="font-size:12px"></i></a>
   </div>
+  <img src="uploads/WhatsApp%20Image%202026-09-01%20at%201.25.22%20PM.jpeg" alt="Elevator car frame safety gear assembly" style="width:100%;aspect-ratio:3/4;object-fit:cover;display:block" />
 </section>
 
-<section aria-label="Featured clients" style="background:#F4F7FB;border-bottom:1px solid #E7EDF3">
-  <div style="max-width:1240px;margin:0 auto;padding:clamp(58px,8vw,110px) 22px;display:grid;gap:40px">
-    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px;align-items:end">
-      <div style="display:grid;gap:16px">
-        <span style="display:flex;align-items:center;gap:10px;color:#1976D2;font-family:'Poppins',Helvetica,sans-serif;font-weight:600;letter-spacing:1.6px;font-size:12.5px;text-transform:uppercase"><span style="width:8px;height:8px;border-radius:50%;background:#1976D2"></span>Clientele</span>
-        <h2 style="margin:0;font-family:'Poppins',Helvetica,sans-serif;font-weight:700;color:#0A2647;font-size:clamp(27px,3.8vw,42px);line-height:1.18;letter-spacing:-0.5px">Trusted by organizations across Bangalore</h2>
-      </div>
-      <a href="Clients.dc.html" style="justify-self:start;display:inline-flex;align-items:center;gap:10px;color:#0D47A1;font-family:'Poppins',Helvetica,sans-serif;font-weight:600;font-size:15.5px;text-decoration:none;background:#ffffff;border:1px solid #E7EDF3;padding:14px 24px;border-radius:4px" style-hover="border-color:#0D47A1">View all clients <i class="fas fa-arrow-right" style="font-size:13px"></i></a>
-    </div>
-    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:22px">
-      <div style="background:#ffffff;border:1px solid #E7EDF3;border-radius:20px;overflow:hidden">
-        <img src="https://images.unsplash.com/photo-1719463814218-52e17f720e8a?auto=format&amp;fit=crop&amp;w=700&amp;q=70" alt="Elevator with open doors inside a commercial building" style="width:100%;aspect-ratio:4/3;object-fit:cover;display:block" />
-        <div style="padding:24px;display:grid;gap:6px"><h3 style="margin:0;font-family:'Poppins',Helvetica,sans-serif;font-size:16.5px;color:#0A2647">Chakra Electrical Pvt Ltd</h3><p style="margin:0;font-size:14px;color:#7C8DA0">Bangalore</p></div>
-      </div>
-      <div style="background:#ffffff;border:1px solid #E7EDF3;border-radius:20px;overflow:hidden">
-        <img src="https://images.unsplash.com/photo-1746702475459-89ff401cafd8?auto=format&amp;fit=crop&amp;w=700&amp;q=70" alt="Two elevators travelling inside a multi storey building" style="width:100%;aspect-ratio:4/3;object-fit:cover;display:block" />
-        <div style="padding:24px;display:grid;gap:6px"><h3 style="margin:0;font-family:'Poppins',Helvetica,sans-serif;font-size:16.5px;color:#0A2647">Saraswati EM English School</h3><p style="margin:0;font-size:14px;color:#7C8DA0">Institutional project</p></div>
-      </div>
-      <div style="background:#ffffff;border:1px solid #E7EDF3;border-radius:20px;overflow:hidden">
-        <img src="https://images.unsplash.com/photo-1772721559246-286e6d986d73?auto=format&amp;fit=crop&amp;w=700&amp;q=70" alt="Building hallway with elevator entrances" style="width:100%;aspect-ratio:4/3;object-fit:cover;display:block" />
-        <div style="padding:24px;display:grid;gap:6px"><h3 style="margin:0;font-family:'Poppins',Helvetica,sans-serif;font-size:16.5px;color:#0A2647">Guru Raj Acharya Mantralayam Project</h3><p style="margin:0;font-size:14px;color:#7C8DA0">Project installation</p></div>
-      </div>
-      <div style="background:#ffffff;border:1px solid #E7EDF3;border-radius:20px;overflow:hidden">
-        <img src="https://images.unsplash.com/photo-1785005670379-88abacb8a6cf?auto=format&amp;fit=crop&amp;w=700&amp;q=70" alt="Modern elevator doors on a white wall" style="width:100%;aspect-ratio:4/3;object-fit:cover;display:block" />
-        <div style="padding:24px;display:grid;gap:6px"><h3 style="margin:0;font-family:'Poppins',Helvetica,sans-serif;font-size:16.5px;color:#0A2647">Janu Enterprises</h3><p style="margin:0;font-size:14px;color:#7C8DA0">Bangalore</p></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section aria-label="Frequently asked questions" style="max-width:1240px;margin:0 auto;padding:clamp(58px,8vw,110px) 22px;display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:clamp(32px,4.5vw,64px);align-items:start">
-  <div style="display:grid;gap:18px">
-    <span style="display:flex;align-items:center;gap:10px;color:#1976D2;font-family:'Poppins',Helvetica,sans-serif;font-weight:600;letter-spacing:1.6px;font-size:12.5px;text-transform:uppercase"><span style="width:8px;height:8px;border-radius:50%;background:#1976D2"></span>Questions</span>
-    <h2 style="margin:0;font-family:'Poppins',Helvetica,sans-serif;font-weight:700;color:#0A2647;font-size:clamp(27px,3.8vw,42px);line-height:1.18;letter-spacing:-0.5px">Commonly asked before a project starts</h2>
-    <p style="margin:0;font-size:16.5px;line-height:1.8">If your question is not here, call us or send a message and we will answer directly.</p>
-    <a href="Contact-Us.dc.html" style="justify-self:start;display:inline-flex;align-items:center;gap:10px;color:#0D47A1;font-family:'Poppins',Helvetica,sans-serif;font-weight:600;font-size:15.5px;text-decoration:none;background:#F4F7FB;padding:14px 24px;border-radius:4px" style-hover="background:#E3F2FD">Ask a question <i class="fas fa-arrow-right" style="font-size:13px"></i></a>
-  </div>
-  <div style="display:grid;gap:14px">
-    <details style="background:#F4F7FB;border:1px solid #E7EDF3;border-radius:16px;padding:22px 24px">
-      <summary style="font-family:'Poppins',Helvetica,sans-serif;font-weight:600;color:#0A2647;font-size:16.5px;cursor:pointer">Which areas do you serve?</summary>
-      <p style="margin:14px 0 0;font-size:15px;line-height:1.75">We work across Bangalore and nearby areas in Karnataka, for residential, commercial and institutional buildings.</p>
-    </details>
-    <details style="background:#F4F7FB;border:1px solid #E7EDF3;border-radius:16px;padding:22px 24px">
-      <summary style="font-family:'Poppins',Helvetica,sans-serif;font-weight:600;color:#0A2647;font-size:16.5px;cursor:pointer">Do you service elevators you did not install?</summary>
-      <p style="margin:14px 0 0;font-size:15px;line-height:1.75">Yes. We take on maintenance contracts, repairs and modernization for existing installations of most makes.</p>
-    </details>
-    <details style="background:#F4F7FB;border:1px solid #E7EDF3;border-radius:16px;padding:22px 24px">
-      <summary style="font-family:'Poppins',Helvetica,sans-serif;font-weight:600;color:#0A2647;font-size:16.5px;cursor:pointer">How long does an installation take?</summary>
-      <p style="margin:14px 0 0;font-size:15px;line-height:1.75">It depends on the building, number of floors and equipment selected. We share an indicative schedule with the proposal.</p>
-    </details>
-    <details style="background:#F4F7FB;border:1px solid #E7EDF3;border-radius:16px;padding:22px 24px">
-      <summary style="font-family:'Poppins',Helvetica,sans-serif;font-weight:600;color:#0A2647;font-size:16.5px;cursor:pointer">What does an AMC include?</summary>
-      <p style="margin:14px 0 0;font-size:15px;line-height:1.75">Scheduled visits, inspections, lubrication, adjustments and priority attention for breakdown calls. Exact inclusions are listed in the contract.</p>
-    </details>
-    <p style="margin:0;font-size:13.5px;line-height:1.7;color:#7C8DA0;background:#ffffff;border:1px dashed #C9D6E2;border-radius:14px;padding:16px 18px">Editable placeholder answers. Confirm with the client before publishing.</p>
-  </div>
-</section>
-
-<section aria-label="Contact call to action" style="padding:0 22px clamp(58px,8vw,100px)">
-  <div style="max-width:1240px;margin:0 auto;background:#0D47A1;border-radius:4px;padding:clamp(34px,4.5vw,60px);display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:28px;align-items:center">
+<section aria-label="Frequently asked questions" style="background:#0F0F10;border-top:1px solid rgba(198,161,91,0.2);border-bottom:1px solid rgba(198,161,91,0.2)">
+  <div style="max-width:1320px;margin:0 auto;padding:clamp(60px,8vw,110px) 24px;display:grid;gap:clamp(28px,3.4vw,44px)">
+    <h2 style="margin:0;font-family:'Marcellus',Georgia,serif;font-weight:400;font-style:italic;color:#C6A15B;font-size:clamp(28px,4vw,48px);line-height:1.14">Frequently Asked Questions</h2>
     <div style="display:grid;gap:14px">
-      <h2 style="margin:0;font-family:'Poppins',Helvetica,sans-serif;font-weight:700;color:#ffffff;font-size:clamp(25px,3.4vw,38px);line-height:1.2;letter-spacing:-0.5px">Need help with elevator solutions?</h2>
-      <p style="margin:0;color:#C9DDF7;font-size:16.5px;line-height:1.75">Talk to our team about installation, maintenance or an upgrade for your building.</p>
-    </div>
-    <div style="display:flex;flex-wrap:wrap;gap:12px;justify-content:flex-end">
-      <a href="Contact-Us.dc.html" style="background:#ffffff;color:#0D47A1;font-family:'Poppins',Helvetica,sans-serif;font-weight:600;font-size:15.5px;padding:16px 34px;border-radius:4px;text-decoration:none;text-align:center" style-hover="background:#E3F2FD">Contact Us</a>
-      <a href="https://wa.me/919148780701" target="_blank" rel="noopener" aria-label="Chat with us on WhatsApp" style="background:#25D366;color:#06341A;padding:16px 20px;border-radius:4px;text-decoration:none;display:flex;align-items:center;justify-content:center" style-hover="background:#1EBE5A"><i class="fab fa-whatsapp" style="font-size:24px"></i></a>
+      <details open style="background:#141415;border-radius:22px;padding:clamp(20px,2.4vw,28px) clamp(22px,2.6vw,34px)">
+        <summary style="display:flex;align-items:center;justify-content:space-between;gap:18px;cursor:pointer;font-family:'Marcellus',Georgia,serif;font-size:clamp(17px,1.9vw,21px);color:#F7F5F1;list-style:none">Which areas do you serve?<i class="fas fa-chevron-down" style="color:#C6A15B;font-size:12px;flex-shrink:0"></i></summary>
+        <p style="margin:16px 0 0;font-size:15.5px;line-height:1.85;color:#A8A49C;max-width:60em">We work across Bangalore and nearby areas in Karnataka, for residential, commercial and institutional buildings.</p>
+      </details>
+      <details style="background:#141415;border-radius:22px;padding:clamp(20px,2.4vw,28px) clamp(22px,2.6vw,34px)">
+        <summary style="display:flex;align-items:center;justify-content:space-between;gap:18px;cursor:pointer;font-family:'Marcellus',Georgia,serif;font-size:clamp(17px,1.9vw,21px);color:#F7F5F1;list-style:none">Do you service elevators you did not install?<i class="fas fa-chevron-down" style="color:#C6A15B;font-size:12px;flex-shrink:0"></i></summary>
+        <p style="margin:16px 0 0;font-size:15.5px;line-height:1.85;color:#A8A49C;max-width:60em">Yes. We take on maintenance contracts, repairs and modernisation for existing installations of most makes.</p>
+      </details>
+      <details style="background:#141415;border-radius:22px;padding:clamp(20px,2.4vw,28px) clamp(22px,2.6vw,34px)">
+        <summary style="display:flex;align-items:center;justify-content:space-between;gap:18px;cursor:pointer;font-family:'Marcellus',Georgia,serif;font-size:clamp(17px,1.9vw,21px);color:#F7F5F1;list-style:none">How long does an installation take?<i class="fas fa-chevron-down" style="color:#C6A15B;font-size:12px;flex-shrink:0"></i></summary>
+        <p style="margin:16px 0 0;font-size:15.5px;line-height:1.85;color:#A8A49C;max-width:60em">It depends on the building, number of floors and equipment selected. We share an indicative schedule with the proposal.</p>
+      </details>
+      <details style="background:#141415;border-radius:22px;padding:clamp(20px,2.4vw,28px) clamp(22px,2.6vw,34px)">
+        <summary style="display:flex;align-items:center;justify-content:space-between;gap:18px;cursor:pointer;font-family:'Marcellus',Georgia,serif;font-size:clamp(17px,1.9vw,21px);color:#F7F5F1;list-style:none">What does an AMC include?<i class="fas fa-chevron-down" style="color:#C6A15B;font-size:12px;flex-shrink:0"></i></summary>
+        <p style="margin:16px 0 0;font-size:15.5px;line-height:1.85;color:#A8A49C;max-width:60em">Scheduled visits, inspections, lubrication, adjustments and priority attention for breakdown calls. Exact inclusions are listed in the contract.</p>
+      </details>
+      <details style="background:#141415;border-radius:22px;padding:clamp(20px,2.4vw,28px) clamp(22px,2.6vw,34px)">
+        <summary style="display:flex;align-items:center;justify-content:space-between;gap:18px;cursor:pointer;font-family:'Marcellus',Georgia,serif;font-size:clamp(17px,1.9vw,21px);color:#F7F5F1;list-style:none">When should an elevator be modernised?<i class="fas fa-chevron-down" style="color:#C6A15B;font-size:12px;flex-shrink:0"></i></summary>
+        <p style="margin:16px 0 0;font-size:15.5px;line-height:1.85;color:#A8A49C;max-width:60em">When parts are hard to source, breakdowns repeat, or ride quality and door timing no longer meet current expectations. We assess the equipment and advise honestly.</p>
+      </details>
     </div>
   </div>
 </section>
 
-<dc-import name="SiteFooter" hint-size="100%,420px"></dc-import>
+
+<dc-import name="SiteFooter" hint-size="100%,460px"></dc-import>
 <dc-import name="FloatingButtons" hint-size="80px,140px"></dc-import>
+
+
 </x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { sent: false, hero: 0, r: 0, w: 0 };
+  rCount = 6;
+  wCount = 6;
+  heroCount = 2;
+  video = React.createRef();
+  video2 = React.createRef();
+  statsGrid = React.createRef();
+  videoPlayCount = 0;
+
+  componentDidMount() {
+    this.scheduleHero();
+    this._resizeStats = () => this.applyStatsLayout();
+    window.addEventListener('resize', this._resizeStats);
+    this.applyStatsLayout();
+    this.wiv = setInterval(() => this.setState({ w: (this.state.w + 1) % this.wCount }), 1500);
+    this.riv = setInterval(() => this.setState({ r: (this.state.r + 1) % this.rCount }), 2000);
+  }
+  componentDidUpdate(pp, ps) { if (ps.hero !== this.state.hero) this.scheduleHero(); this.applyStatsLayout(); }
+  componentWillUnmount() { clearTimeout(this.t); clearTimeout(this.t2); clearInterval(this.wiv); clearInterval(this.riv); window.removeEventListener('resize', this._resizeStats); }
+
+  applyStatsLayout() {
+    const grid = this.statsGrid.current;
+    if (!grid) return;
+    const stats = Array.from(grid.children).filter((child) => child.tagName === 'DIV');
+    const separators = Array.from(grid.children).filter((child) => child.tagName === 'SPAN');
+    if (window.innerWidth <= 700) {
+      grid.style.display = 'grid';
+      grid.style.gridTemplateColumns = 'repeat(2, minmax(0, 1fr))';
+      grid.style.width = '100%';
+      grid.style.gap = '18px 12px';
+      grid.style.padding = '20px 14px';
+      grid.style.borderRadius = '22px';
+      separators.forEach((separator) => { separator.style.display = 'none'; });
+      stats.forEach((stat, index) => {
+        stat.style.width = index === 0 ? '94px' : 'auto';
+        stat.style.height = index === 0 ? '94px' : 'auto';
+        stat.style.minHeight = index === 0 ? '94px' : '92px';
+        stat.style.minWidth = '0';
+        if (index === 0) stat.style.justifySelf = 'center';
+      });
+      return;
+    }
+    grid.style.display = 'flex';
+    grid.style.width = 'fit-content';
+    grid.style.gap = 'clamp(18px, 2.6vw, 38px)';
+    grid.style.padding = 'clamp(24px, 2.8vw, 34px) clamp(26px, 3.4vw, 46px)';
+    grid.style.borderRadius = '44px 44px 0 0';
+    separators.forEach((separator) => { separator.style.display = ''; });
+    stats.forEach((stat) => { stat.style.width = ''; stat.style.height = ''; stat.style.minHeight = ''; stat.style.minWidth = ''; stat.style.justifySelf = ''; });
+  }
+
+  stepRange(d) {
+    clearInterval(this.riv);
+    this.setState({ r: (this.state.r + d + this.rCount) % this.rCount });
+    this.riv = setInterval(() => this.setState({ r: (this.state.r + 1) % this.rCount }), 2000);
+  }
+
+  nextHero = () => this.setState({ hero: (this.state.hero + 1) % this.heroCount });
+
+  scheduleHero() {
+    clearTimeout(this.t);
+    clearTimeout(this.t2);
+    const videos = [this.video.current, this.video2.current];
+    videos.forEach((video) => { if (video) video.pause(); });
+    if (this.state.hero === 0 || this.state.hero === 1) {
+      const v = (this.state.hero === 1 ? this.video2 : this.video).current;
+      this.videoPlayCount = 0;
+      if (v) {
+        try { v.currentTime = 0; v.muted = true; const p = v.play(); if (p && p.catch) p.catch(() => {}); } catch (e) {}
+      }
+      // Fallback in case the video cannot autoplay or never fires "ended".
+      const fallbackDelay = Number.isFinite(v && v.duration) && v.duration > 0 ? (v.duration * 2 + 3) * 1000 : 120000;
+      this.t = setTimeout(this.nextHero, fallbackDelay);
+    } else {
+      this.t = setTimeout(this.nextHero, 5000);
+    }
+  }
+  slides = [
+    { kicker: 'Safe. Reliable. Always.', title: "Bangalore's Trusted Elevator Specialists, Since 2021", body: 'V Secure Elevators Pvt. Ltd. installs, maintains and modernises passenger elevators, home lifts, commercial elevators and goods lifts for residential, commercial and institutional projects across Karnataka.' },
+    { kicker: 'Installation', title: 'Residential & Commercial Elevators', body: 'Passenger, home and commercial elevators installed from shaft preparation through wiring, testing and commissioning, specified around floor count, capacity and daily traffic.' },
+  ];
+  renderVals() {
+    const n = this.heroCount;
+    const i = ((this.state.hero % n) + n) % n;
+    const s = this.slides[i] || this.slides[0];
+    return {
+      sent: this.state.sent,
+      submit: (e) => { e.preventDefault(); this.setState({ sent: true }); },
+      videoRef: this.video,
+      statsGridRef: this.statsGrid,
+      videoEnded: (event) => {
+        if (this.videoPlayCount < 1) {
+          this.videoPlayCount += 1;
+          const video = (this.state.hero === 1 ? this.video2 : this.video).current || (event && event.currentTarget);
+          if (video) {
+            try { video.currentTime = 0; const p = video.play(); if (p && p.catch) p.catch(() => {}); } catch (e) {}
+          }
+          return;
+        }
+        clearTimeout(this.t);
+        this.t2 = setTimeout(this.nextHero, 1000);
+      },
+      op0: i === 0 ? 1 : 0,
+      op5: i === 1 ? 1 : 0,
+      videoRef2: this.video2,
+      heroKicker: s.kicker,
+      heroTitle: s.title,
+      heroBody: s.body,
+      w0: this.state.w === 0 ? 1 : 0,
+      w1: this.state.w === 1 ? 1 : 0,
+      w2: this.state.w === 2 ? 1 : 0,
+      w3: this.state.w === 3 ? 1 : 0,
+      w4: this.state.w === 4 ? 1 : 0,
+      w5: this.state.w === 5 ? 1 : 0,
+      rTrack: 'translateX(calc(-1 * ' + Math.max(0, Math.min(this.state.r - 1, this.rCount - 3)) + ' * (31.5% + clamp(14px,1.8vw,26px))))',
+      rPrev: () => this.stepRange(-1),
+      rNext: () => this.stepRange(1),
+      prevHero: () => this.setState({ hero: (this.state.hero - 1 + n) % n }),
+      nextHero: () => this.setState({ hero: (this.state.hero + 1) % n })
+    };
+  }
+}
+</script>
 </body>
 </html>

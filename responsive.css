@@ -1,0 +1,62 @@
+/* Shared small-screen layout rules for all V Secure pages and imported components. */
+html { -webkit-text-size-adjust: 100%; }
+body { overflow-x: hidden; }
+img, video, iframe { max-width: 100%; }
+
+@media (max-width: 700px) {
+  body { min-width: 0; }
+
+  /* The site uses inline auto-fit grids; their desktop minimums are too wide for phones. */
+  [style*="minmax(320px,1fr)"],
+  [style*="minmax(300px,1fr)"],
+  [style*="minmax(280px,1fr)"],
+  [style*="minmax(260px,1fr)"],
+  [style*="minmax(250px,1fr)"],
+  [style*="minmax(240px,1fr)"],
+  [style*="minmax(230px,1fr)"],
+  [style*="minmax(220px,1fr)"],
+  [style*="minmax(210px,1fr)"],
+  [style*="minmax(200px,1fr)"] {
+    grid-template-columns: minmax(0, 1fr) !important;
+  }
+
+  header nav { min-height: 62px !important; padding: 0 18px !important; gap: 12px !important; }
+  header nav > a img { height: 34px !important; }
+
+  section[aria-label="Hero"] { min-height: 0 !important; display: block !important; padding-bottom: 78px !important; }
+  section[aria-label="Hero"] > div:nth-of-type(3) { padding: 104px 20px 0 !important; gap: 17px !important; }
+  section[aria-label="Hero"] > div:nth-of-type(3) h1 { font-size: 34px !important; }
+  section[aria-label="Hero"] > div:nth-of-type(3) p { font-size: 15px !important; line-height: 1.65 !important; }
+  section[aria-label="Hero"] > div:nth-of-type(3) a { width: 100%; text-align: center; padding: 16px 20px !important; }
+  .hero-stats { padding: 22px 14px 0 !important; }
+  .hero-stats-grid { width: 100% !important; border-radius: 22px !important; padding: 20px 14px !important; gap: 18px 12px !important; display: grid !important; grid-template-columns: repeat(2, minmax(0, 1fr)) !important; justify-content: stretch !important; }
+  .hero-stats-grid > div { min-width: 0; min-height: 92px; width: auto !important; }
+  .hero-stats-grid > div:first-child { width: 94px !important; height: 94px !important; min-height: 94px; justify-self: center; }
+  .hero-stats-grid > span[style*="width:1px"] { display: none !important; }
+  section[aria-label="Hero"] > div:nth-of-type(5) { right: 16px !important; bottom: 16px !important; }
+  section[aria-label="Hero"] > div:nth-of-type(5) button { width: 46px !important; height: 46px !important; }
+
+  section[aria-label="Page header"] { min-height: 360px !important; }
+  section[aria-label="Page header"] > div:last-child { padding-left: 20px !important; padding-right: 20px !important; }
+  section[aria-label="Page header"] h1 { font-size: 36px !important; }
+
+  [style*="padding:clamp(56px,7vw,100px) 24px"],
+  [style*="padding:clamp(60px,8vw,110px) 24px"],
+  [style*="padding:clamp(64px,8vw,120px) 24px"],
+  [style*="padding:clamp(70px,10vw,120px) 24px"],
+  [style*="padding:clamp(80px,11vw,140px) 24px"] { padding-left: 20px !important; padding-right: 20px !important; }
+
+  form { border-radius: 20px !important; }
+  input, select, textarea { font-size: 16px !important; }
+
+  footer > div:first-child { padding: 44px 20px 30px !important; gap: 34px !important; }
+  footer > div:last-child > div { padding: 18px 20px !important; align-items: flex-start; flex-direction: column; }
+
+  [style*="position:fixed;right:20px;bottom:20px"] { right: 14px !important; bottom: 14px !important; gap: 10px !important; }
+  [style*="position:fixed;right:20px;bottom:20px"] a { width: 52px !important; height: 52px !important; font-size: 25px !important; }
+}
+
+@media (max-width: 390px) {
+  section[aria-label="Hero"] > div:nth-of-type(4) > div { padding: 16px 12px !important; gap: 12px !important; }
+  [role="dialog"] { padding-left: 16px !important; padding-right: 16px !important; }
+}

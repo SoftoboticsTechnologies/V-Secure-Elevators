@@ -1,0 +1,23 @@
+@media (prefers-reduced-motion: no-preference) {
+  [data-vs-animate] {
+    opacity: 0 !important;
+    transform: translate3d(0, 28px, 0) !important;
+    transition: opacity 720ms cubic-bezier(0.22, 1, 0.36, 1) var(--vs-delay, 0ms), transform 720ms cubic-bezier(0.22, 1, 0.36, 1) var(--vs-delay, 0ms) !important;
+    will-change: opacity, transform;
+  }
+
+  [data-vs-animate="left"] { transform: translate3d(-32px, 0, 0) !important; }
+  [data-vs-animate="right"] { transform: translate3d(32px, 0, 0) !important; }
+  [data-vs-animate="scale"] { transform: scale(0.94) !important; }
+
+  [data-vs-animate].vs-visible {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  section[aria-label="Hero"] [data-vs-animate] { transition-duration: 820ms !important; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  [data-vs-animate] { opacity: 1 !important; transform: none !important; transition: none !important; }
+}

@@ -4,6 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script src="./support.js"></script>
+<link rel="stylesheet" href="./responsive.css">
 </head>
 <body>
 <x-dc>
@@ -12,7 +13,7 @@
 </helmet>
 <div style="position:fixed;right:20px;bottom:20px;z-index:900;display:flex;flex-direction:column;align-items:center;gap:12px">
   <sc-if value="{{ scrolled }}" hint-placeholder-val="{{ false }}">
-    <button type="button" aria-label="Back to top" onClick="{{ toTop }}" style="width:52px;height:52px;border-radius:50%;border:0;background:#0D47A1;color:#ffffff;font-size:19px;cursor:pointer;box-shadow:0 6px 18px rgba(13,43,87,0.35);display:flex;align-items:center;justify-content:center" style-hover="background:#1976D2">
+    <button type="button" aria-label="Back to top" onClick="{{ toTop }}" style="width:52px;height:52px;border:1px solid #C6A15B;background:#0B0B0C;color:#C6A15B;font-size:17px;cursor:pointer;box-shadow:0 6px 20px rgba(0,0,0,0.5);display:flex;align-items:center;justify-content:center" style-hover="background:#C6A15B;color:#0B0B0C">
       <i class="fas fa-arrow-up"></i>
     </button>
   </sc-if>
