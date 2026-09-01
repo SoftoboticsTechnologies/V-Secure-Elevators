@@ -1,6 +1,6 @@
 /* Shared small-screen layout rules for all V Secure pages and imported components. */
-html { -webkit-text-size-adjust: 100%; }
-body { overflow-x: hidden; }
+html { -webkit-text-size-adjust: 100%; overflow-x: hidden; width: 100%; }
+body { max-width: 100vw; overflow-x: hidden; }
 img, video, iframe { max-width: 100%; }
 
 @media (max-width: 700px) {
@@ -21,7 +21,8 @@ img, video, iframe { max-width: 100%; }
   }
 
   header nav { min-height: 62px !important; padding: 0 18px !important; gap: 12px !important; }
-  header nav > a img { height: 34px !important; }
+  header nav img { height: 34px !important; }
+  .vs-nav-cin { display: none !important; }
 
   section[aria-label="Hero"] { min-height: 0 !important; display: block !important; padding-bottom: 78px !important; }
   section[aria-label="Hero"] > div:nth-of-type(3) { padding: 104px 20px 0 !important; gap: 17px !important; }
@@ -55,8 +56,6 @@ img, video, iframe { max-width: 100%; }
   footer > div:first-child { padding: 44px 20px 30px !important; gap: 34px !important; }
   footer > div:last-child > div { padding: 18px 20px !important; align-items: flex-start; flex-direction: column; }
 
-  [style*="position:fixed;right:20px;bottom:20px"] { right: 14px !important; bottom: 14px !important; gap: 10px !important; }
-  [style*="position:fixed;right:20px;bottom:20px"] a { width: 52px !important; height: 52px !important; font-size: 25px !important; }
 }
 
 @media (max-width: 390px) {
