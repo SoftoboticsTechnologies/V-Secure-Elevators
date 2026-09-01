@@ -48,7 +48,8 @@ summary::-webkit-details-marker{display:none}
 <section aria-label="Hero" style="position:relative;min-height:clamp(560px,92vh,960px);display:grid;align-content:end;padding-bottom:0">
   <div style="position:absolute;inset:0;background:#0B0B0C;overflow:hidden">
     <video ref="{{ videoRef }}" src="assets/hero%201.mp4" muted="{{ true }}" playsInline="{{ true }}" preload="auto" onEnded="{{ videoEnded }}" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:{{ op0 }};transition:opacity 900ms ease"></video>
-    <video ref="{{ videoRef2 }}" src="assets/WhatsApp%20Video%202026-09-01%20at%201.15.01%20PM.mp4" muted="{{ true }}" playsInline="{{ true }}" preload="auto" onEnded="{{ videoEnded }}" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:{{ op5 }};transition:opacity 900ms ease"></video>
+    <video ref="{{ videoRef2 }}" src="assets/WhatsApp%20Video%202026-09-01%20at%201.13.01%20PM.mp4" muted="{{ true }}" playsInline="{{ true }}" preload="auto" onEnded="{{ videoEnded }}" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:{{ op5 }};transition:opacity 900ms ease"></video>
+    <video ref="{{ videoRef3 }}" src="assets/WhatsApp%20Video%202026-09-01%20at%201.15.01%20PM.mp4" muted="{{ true }}" playsInline="{{ true }}" preload="auto" onEnded="{{ videoEnded }}" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:{{ op2 }};transition:opacity 900ms ease"></video>
   </div>
   <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(11,11,12,0.48) 0%,rgba(11,11,12,0.34) 40%,rgba(11,11,12,0.82) 100%)"></div>
   <div style="position:relative;width:100%;padding:clamp(120px,18vw,240px) 24px 0 clamp(20px,2vw,40px);display:grid;gap:22px;justify-items:start">
@@ -303,9 +304,10 @@ class Component extends DCLogic {
   state = { sent: false, hero: 0, r: 0, w: 0 };
   rCount = 6;
   wCount = 6;
-  heroCount = 2;
+  heroCount = 3;
   video = React.createRef();
   video2 = React.createRef();
+  video3 = React.createRef();
   statsGrid = React.createRef();
   videoPlayCount = 0;
 
@@ -362,10 +364,11 @@ class Component extends DCLogic {
   scheduleHero() {
     clearTimeout(this.t);
     clearTimeout(this.t2);
-    const videos = [this.video.current, this.video2.current];
-    videos.forEach((video) => { if (video) video.pause(); });
-    if (this.state.hero === 0 || this.state.hero === 1) {
-      const v = (this.state.hero === 1 ? this.video2 : this.video).current;
+    const videos = [this.video.current, this.video2.current, this.video3.current];
+    videos.forEach((video) => { if (video) { video.pause(); video.currentTime = 0; } });
+    if (this.state.hero === 0 || this.state.hero === 1 || this.state.hero === 2) {
+      const activeVideoRefs = [this.video.current, this.video2.current, this.video3.current];
+      const v = activeVideoRefs[this.state.hero];
       this.videoPlayCount = 0;
       if (v) {
         try { v.currentTime = 0; v.muted = true; const p = v.play(); if (p && p.catch) p.catch(() => {}); } catch (e) {}
@@ -393,7 +396,8 @@ class Component extends DCLogic {
       videoEnded: (event) => {
         if (this.videoPlayCount < 1) {
           this.videoPlayCount += 1;
-          const video = (this.state.hero === 1 ? this.video2 : this.video).current || (event && event.currentTarget);
+          const activeVideoRefs = [this.video.current, this.video2.current, this.video3.current];
+          const video = activeVideoRefs[this.state.hero] || (event && event.currentTarget);
           if (video) {
             try { video.currentTime = 0; const p = video.play(); if (p && p.catch) p.catch(() => {}); } catch (e) {}
           }
@@ -404,7 +408,9 @@ class Component extends DCLogic {
       },
       op0: i === 0 ? 1 : 0,
       op5: i === 1 ? 1 : 0,
+      op2: i === 2 ? 1 : 0,
       videoRef2: this.video2,
+      videoRef3: this.video3,
       heroKicker: s.kicker,
       heroTitle: s.title,
       heroBody: s.body,
