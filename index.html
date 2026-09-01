@@ -47,8 +47,8 @@ summary::-webkit-details-marker{display:none}
 
 <section aria-label="Hero" style="position:relative;min-height:clamp(560px,92vh,960px);display:grid;align-content:end;padding-bottom:0">
   <div style="position:absolute;inset:0;background:#0B0B0C;overflow:hidden">
-    <video ref="{{ videoRef }}" src="assets/hero%201.mp4" muted="{{ true }}" playsInline="{{ true }}" preload="auto" onEnded="{{ videoEnded }}" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:{{ op0 }};transition:opacity 900ms ease"></video>
-    <video ref="{{ videoRef2 }}" src="assets/WhatsApp%20Video%202026-09-01%20at%201.13.01%20PM.mp4" muted="{{ true }}" playsInline="{{ true }}" preload="auto" onEnded="{{ videoEnded }}" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:{{ op5 }};transition:opacity 900ms ease"></video>
+    <video ref="{{ videoRef }}" src="assets/hero%202.mp4" muted="{{ true }}" playsInline="{{ true }}" preload="auto" onEnded="{{ videoEnded }}" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:{{ op0 }};transition:opacity 900ms ease"></video>
+    <video ref="{{ videoRef2 }}" src="assets/hero%202.mp4" muted="{{ true }}" playsInline="{{ true }}" preload="auto" onEnded="{{ videoEnded }}" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:{{ op1 }};transition:opacity 900ms ease"></video>
     <video ref="{{ videoRef3 }}" src="assets/WhatsApp%20Video%202026-09-01%20at%201.15.01%20PM.mp4" muted="{{ true }}" playsInline="{{ true }}" preload="auto" onEnded="{{ videoEnded }}" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:{{ op2 }};transition:opacity 900ms ease"></video>
   </div>
   <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(11,11,12,0.48) 0%,rgba(11,11,12,0.34) 40%,rgba(11,11,12,0.82) 100%)"></div>
@@ -364,25 +364,20 @@ class Component extends DCLogic {
   scheduleHero() {
     clearTimeout(this.t);
     clearTimeout(this.t2);
-    const videos = [this.video.current, this.video2.current, this.video3.current];
-    videos.forEach((video) => { if (video) { video.pause(); video.currentTime = 0; } });
-    if (this.state.hero === 0 || this.state.hero === 1 || this.state.hero === 2) {
-      const activeVideoRefs = [this.video.current, this.video2.current, this.video3.current];
-      const v = activeVideoRefs[this.state.hero];
-      this.videoPlayCount = 0;
-      if (v) {
-        try { v.currentTime = 0; v.muted = true; const p = v.play(); if (p && p.catch) p.catch(() => {}); } catch (e) {}
-      }
-      // Fallback in case the video cannot autoplay or never fires "ended".
-      const fallbackDelay = Number.isFinite(v && v.duration) && v.duration > 0 ? (v.duration * 2 + 3) * 1000 : 120000;
-      this.t = setTimeout(this.nextHero, fallbackDelay);
-    } else {
-      this.t = setTimeout(this.nextHero, 5000);
+    const activeVideoRefs = [this.video.current, this.video2.current, this.video3.current];
+    activeVideoRefs.forEach((video) => { if (video) { video.pause(); video.currentTime = 0; } });
+    const v = activeVideoRefs[this.state.hero] || activeVideoRefs[0];
+    this.videoPlayCount = 0;
+    if (v) {
+      try { v.currentTime = 0; v.muted = true; const p = v.play(); if (p && p.catch) p.catch(() => {}); } catch (e) {}
     }
+    const fallbackDelay = Number.isFinite(v && v.duration) && v.duration > 0 ? (v.duration * 2 + 3) * 1000 : 120000;
+    this.t = setTimeout(this.nextHero, fallbackDelay);
   }
   slides = [
     { kicker: 'Safe. Reliable. Always.', title: "Bangalore's Trusted Elevator Specialists, Since 2021", body: 'V Secure Elevators Pvt. Ltd. installs, maintains and modernises passenger elevators, home lifts, commercial elevators and goods lifts for residential, commercial and institutional projects across Karnataka.' },
     { kicker: 'Installation', title: 'Residential & Commercial Elevators', body: 'Passenger, home and commercial elevators installed from shaft preparation through wiring, testing and commissioning, specified around floor count, capacity and daily traffic.' },
+    { kicker: 'Service Excellence', title: 'Lift Maintenance, Modernisation & Support', body: 'Maintenance contracts, repairs and modernisations delivered by one accountable team for residential, commercial and institutional buildings.' }
   ];
   renderVals() {
     const n = this.heroCount;
@@ -407,7 +402,7 @@ class Component extends DCLogic {
         this.t2 = setTimeout(this.nextHero, 1000);
       },
       op0: i === 0 ? 1 : 0,
-      op5: i === 1 ? 1 : 0,
+      op1: i === 1 ? 1 : 0,
       op2: i === 2 ? 1 : 0,
       videoRef2: this.video2,
       videoRef3: this.video3,
