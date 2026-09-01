@@ -42,7 +42,7 @@ img{max-width:100%;height:auto}
     <div style="display:flex;align-items:center;justify-content:flex-end;gap:22px">
       <a href="Clients.dc.html" style="display:{{ deskDisplay }};font-size:13px;font-weight:600;letter-spacing:1.1px;text-transform:uppercase;text-decoration:none;color:{{ cClients }}" style-hover="color:#ffffff">Clients</a>
       <button type="button" onClick="{{ openQuote }}" style="display:{{ deskDisplay }};background:transparent;border:0;color:#ffffff;font-family:'Open Sans',Helvetica,Arial,sans-serif;font-size:13px;font-weight:600;letter-spacing:1.1px;text-transform:uppercase;cursor:pointer;padding:0" style-hover="color:#8FB6E8">Get Quote</button>
-      <button type="button" aria-label="Open menu" onClick="{{ toggle }}" style="background:transparent;border:0;padding:6px 0;cursor:pointer;display:grid;gap:6px;width:42px;justify-items:stretch">
+      <button type="button" aria-label="Open menu" onClick="{{ toggle }}" style="background:transparent;border:0;padding:6px 0;cursor:pointer;display:{{ mobDisplay }};gap:6px;width:42px;justify-items:stretch">
         <span style="display:block;height:2px;background:#ffffff"></span>
         <span style="display:block;height:2px;background:#ffffff"></span>
       </button>
@@ -377,6 +377,7 @@ class Component extends DCLogic {
       open: this.state.open,
       quote: this.state.quote,
       deskDisplay: mobile ? 'none' : 'flex',
+      mobDisplay: mobile ? 'grid' : 'none',
       toggle: () => this.setState({ open: !this.state.open }),
       drop: this.state.drop,
       openDrop: () => this.setState({ drop: true }),
