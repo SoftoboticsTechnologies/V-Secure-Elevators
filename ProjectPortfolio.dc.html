@@ -29,9 +29,9 @@
         <span style="width:3px;height:22px;background:{{ pt3 }};transition:background 400ms ease"></span>
       </div>
       <div style="width:2px;background:rgba(243,240,234,0.7);flex-shrink:0"></div>
-      <div style="flex:1;height:480px;overflow:hidden;position:relative">
-        <div style="transform:{{ pTrack }};transition:transform 700ms cubic-bezier(0.4,0,0.2,1);will-change:transform">
-          <article style="height:320px;display:grid;gap:14px;align-content:center;opacity:{{ p0 }};transition:opacity 500ms ease">
+      <div style="flex:1;height:{{ trackHeight }};overflow:hidden;position:relative">
+        <div style="display:grid;gap:24px;transform:{{ pTrack }};transition:transform 700ms cubic-bezier(0.4,0,0.2,1);will-change:transform">
+          <article ref="{{ cardRef0 }}" style="display:grid;gap:14px;opacity:{{ p0 }};filter:blur({{ pb0 }});transition:opacity 500ms ease,filter 500ms ease">
             <div style="display:flex;align-items:center;gap:16px">
               <span style="width:52px;height:52px;flex-shrink:0;border-radius:50%;background:#141415;border:1px solid rgba(198,161,91,0.4);display:inline-flex;align-items:center;justify-content:center;color:#C6A15B;font-size:16px"><i class="fas fa-industry"></i></span>
               <div style="display:grid;gap:2px">
@@ -40,14 +40,13 @@
               </div>
             </div>
             <div style="display:flex;flex-wrap:wrap;gap:clamp(18px,2.4vw,32px);align-items:center">
-              <img src="uploads/WhatsApp%20Image%202026-09-01%20at%201.32.45%20PM.jpeg" alt="Elevator cabin installed for Chakra Electrical Pvt Ltd" style="width:clamp(200px,26vw,290px);height:170px;object-fit:cover;border-radius:12px;display:block" />
               <ul style="margin:0;padding:0;list-style:none;display:grid;gap:10px">
                 <li style="display:flex;align-items:center;gap:11px;font-size:16px;color:#E5E1DA"><i class="fas fa-star" style="color:#C6A15B;font-size:11px"></i>2 Passenger Elevators</li>
                 <li style="display:flex;align-items:center;gap:11px;font-size:16px;color:#E5E1DA"><i class="fas fa-star" style="color:#C6A15B;font-size:11px"></i>1 Goods Elevator</li>
               </ul>
             </div>
           </article>
-          <article style="height:320px;display:grid;gap:14px;align-content:center;opacity:{{ p1 }};transition:opacity 500ms ease">
+          <article ref="{{ cardRef1 }}" style="display:grid;gap:14px;opacity:{{ p1 }};filter:blur({{ pb1 }});transition:opacity 500ms ease,filter 500ms ease">
             <div style="display:flex;align-items:center;gap:16px">
               <span style="width:52px;height:52px;flex-shrink:0;border-radius:50%;background:#141415;border:1px solid rgba(198,161,91,0.4);display:inline-flex;align-items:center;justify-content:center;color:#C6A15B;font-size:16px"><i class="fas fa-graduation-cap"></i></span>
               <div style="display:grid;gap:2px">
@@ -56,14 +55,13 @@
               </div>
             </div>
             <div style="display:flex;flex-wrap:wrap;gap:clamp(18px,2.4vw,32px);align-items:center">
-              <img src="uploads/WhatsApp%20Image%202026-09-01%20at%201.33.12%20PM.jpeg" alt="Elevator cabin installed for Saraswati EM English School" style="width:clamp(200px,26vw,290px);height:170px;object-fit:cover;border-radius:12px;display:block" />
               <ul style="margin:0;padding:0;list-style:none;display:grid;gap:10px">
                 <li style="display:flex;align-items:center;gap:11px;font-size:16px;color:#E5E1DA"><i class="fas fa-star" style="color:#C6A15B;font-size:11px"></i>1 Passenger Elevator</li>
                 <li style="display:flex;align-items:center;gap:11px;font-size:16px;color:#E5E1DA"><i class="fas fa-star" style="color:#C6A15B;font-size:11px"></i>Annual maintenance contract</li>
               </ul>
             </div>
           </article>
-          <article style="height:320px;display:grid;gap:14px;align-content:center;opacity:{{ p2 }};transition:opacity 500ms ease">
+          <article ref="{{ cardRef2 }}" style="display:grid;gap:14px;opacity:{{ p2 }};filter:blur({{ pb2 }});transition:opacity 500ms ease,filter 500ms ease">
             <div style="display:flex;align-items:center;gap:16px">
               <span style="width:52px;height:52px;flex-shrink:0;border-radius:50%;background:#141415;border:1px solid rgba(198,161,91,0.4);display:inline-flex;align-items:center;justify-content:center;color:#C6A15B;font-size:16px"><i class="fas fa-place-of-worship"></i></span>
               <div style="display:grid;gap:2px">
@@ -72,14 +70,13 @@
               </div>
             </div>
             <div style="display:flex;flex-wrap:wrap;gap:clamp(18px,2.4vw,32px);align-items:center">
-              <img src="uploads/WhatsApp%20Image%202026-09-01%20at%201.33.01%20PM.jpeg" alt="Elevator cabin installed for Guru Raj Acharya Mantralayam" style="width:clamp(200px,26vw,290px);height:170px;object-fit:cover;border-radius:12px;display:block" />
               <ul style="margin:0;padding:0;list-style:none;display:grid;gap:10px">
                 <li style="display:flex;align-items:center;gap:11px;font-size:16px;color:#E5E1DA"><i class="fas fa-star" style="color:#C6A15B;font-size:11px"></i>1 Passenger Elevator</li>
                 <li style="display:flex;align-items:center;gap:11px;font-size:16px;color:#E5E1DA"><i class="fas fa-star" style="color:#C6A15B;font-size:11px"></i>Visitor access design</li>
               </ul>
             </div>
           </article>
-          <article style="height:320px;display:grid;gap:14px;align-content:center;opacity:{{ p3 }};transition:opacity 500ms ease">
+          <article ref="{{ cardRef3 }}" style="display:grid;gap:14px;opacity:{{ p3 }};filter:blur({{ pb3 }});transition:opacity 500ms ease,filter 500ms ease">
             <div style="display:flex;align-items:center;gap:16px">
               <span style="width:52px;height:52px;flex-shrink:0;border-radius:50%;background:#141415;border:1px solid rgba(198,161,91,0.4);display:inline-flex;align-items:center;justify-content:center;color:#C6A15B;font-size:16px"><i class="fas fa-briefcase"></i></span>
               <div style="display:grid;gap:2px">
@@ -88,7 +85,6 @@
               </div>
             </div>
             <div style="display:flex;flex-wrap:wrap;gap:clamp(18px,2.4vw,32px);align-items:center">
-              <img src="uploads/WhatsApp%20Image%202026-09-01%20at%201.32.35%20PM.jpeg" alt="Elevator cabin installed for Janu Enterprises" style="width:clamp(200px,26vw,290px);height:170px;object-fit:cover;border-radius:12px;display:block" />
               <ul style="margin:0;padding:0;list-style:none;display:grid;gap:10px">
                 <li style="display:flex;align-items:center;gap:11px;font-size:16px;color:#E5E1DA"><i class="fas fa-star" style="color:#C6A15B;font-size:11px"></i>1 Passenger Elevator</li>
                 <li style="display:flex;align-items:center;gap:11px;font-size:16px;color:#E5E1DA"><i class="fas fa-star" style="color:#C6A15B;font-size:11px"></i>Ongoing maintenance</li>
@@ -103,17 +99,40 @@
 </x-dc>
 <script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1320,&quot;height&quot;:640}}">
 class Component extends DCLogic {
-  state = { p: 0 };
+  state = { p: 0, cardH: 150 };
   count = 4;
+  peek = 40;
+  gap = 24;
+  cardRefs = [React.createRef(), React.createRef(), React.createRef(), React.createRef()];
   componentDidMount() {
     this.iv = setInterval(() => this.setState({ p: (this.state.p + 1) % this.count }), 2500);
+    this.measureCard();
+  }
+  componentDidUpdate(prevProps, prevState) {
+    if (prevState.p !== this.state.p) this.measureCard();
   }
   componentWillUnmount() { clearInterval(this.iv); }
+  measureCard() {
+    const el = this.cardRefs[this.state.p].current;
+    if (!el) return;
+    const h = Math.ceil(el.getBoundingClientRect().height);
+    if (h && h !== this.state.cardH) this.setState({ cardH: h });
+  }
   renderVals() {
     const i = this.state.p;
-    const o = { pTrack: 'translateY(' + (80 - i * 320) + 'px)' };
+    const cardH = this.state.cardH;
+    const step = cardH + this.gap;
+    const o = {
+      pTrack: 'translateY(' + (this.peek - i * step) + 'px)',
+      trackHeight: (cardH + this.peek * 2) + 'px',
+      cardRef0: this.cardRefs[0],
+      cardRef1: this.cardRefs[1],
+      cardRef2: this.cardRefs[2],
+      cardRef3: this.cardRefs[3]
+    };
     for (let k = 0; k < this.count; k++) {
       o['p' + k] = i === k ? 1 : 0.25;
+      o['pb' + k] = i === k ? '0px' : '2px';
       o['pt' + k] = i === k ? '#ffffff' : 'rgba(243,240,234,0.3)';
     }
     return o;
