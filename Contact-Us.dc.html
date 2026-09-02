@@ -4,6 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script src="./support.js"></script>
+<script src="./contact-api.js"></script>
 <link rel="stylesheet" href="./responsive.css">
 <link rel="stylesheet" href="./animations.css">
 <script src="./site-animations.js" defer></script>
@@ -101,11 +102,13 @@ a:hover{color:#E0C489}
         </select>
         <i class="fas fa-chevron-down" style="position:absolute;right:20px;bottom:14px;color:#B7B3AB;font-size:11px;pointer-events:none"></i>
       </div>
-    <button type="submit" style="justify-self:start;background:#C6A15B;border:0;color:#0B0B0C;font-family:'Jost',sans-serif;font-size:16px;padding:17px 34px;border-radius:999px;cursor:pointer;margin-top:6px" style-hover="background:#E0C489">Request a Project Consultation</button>
+    <button type="submit" disabled="{{ sending }}" style="justify-self:start;background:#C6A15B;border:0;color:#0B0B0C;font-family:'Jost',sans-serif;font-size:16px;padding:17px 34px;border-radius:999px;cursor:pointer;margin-top:6px" style-hover="background:#E0C489">{{ submitLabel }}</button>
     <sc-if value="{{ sent }}" hint-placeholder-val="{{ false }}">
       <p style="margin:0;font-size:14.5px;color:#C6A15B">Thank you. Your enquiry has been noted and our team will respond within one working day.</p>
     </sc-if>
-    <p style="margin:0;font-size:13px;color:#6E6A63">Form submissions need to be connected to the client's email or CRM before going live.</p>
+    <sc-if value="{{ error }}" hint-placeholder-val="{{ false }}">
+      <p style="margin:0;font-size:14.5px;color:#E5716B">Something went wrong sending your enquiry. Please try again or reach us directly using the details on this page.</p>
+    </sc-if>
   </form>
 </section>
 
@@ -122,11 +125,26 @@ a:hover{color:#E0C489}
 </x-dc>
 <script type="text/x-dc" data-dc-script>
 class Component extends DCLogic {
-  state = { sent: false };
+  state = { sending: false, sent: false, error: false };
   renderVals() {
     return {
+      sending: this.state.sending,
       sent: this.state.sent,
-      submit: (e) => { e.preventDefault(); this.setState({ sent: true }); }
+      error: this.state.error,
+      submitLabel: this.state.sending ? 'Sending…' : 'Request a Project Consultation',
+      submit: async (e) => {
+        e.preventDefault();
+        const form = e.target;
+        const data = Object.fromEntries(new FormData(form).entries());
+        this.setState({ sending: true, sent: false, error: false });
+        try {
+          await vsSubmitContactForm(data);
+          this.setState({ sending: false, sent: true });
+          form.reset();
+        } catch (err) {
+          this.setState({ sending: false, error: true });
+        }
+      }
     };
   }
 }
