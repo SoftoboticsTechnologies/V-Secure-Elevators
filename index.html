@@ -31,8 +31,11 @@ summary::-webkit-details-marker{display:none}
 .hero-years-content>span:first-child{font-size:34px!important}
 .hero-years-content>span:last-child{font-size:9px!important;letter-spacing:1.6px!important;line-height:1.35!important}
 .hero-mobile-quote{display:none}
+.hero-img0-mobile-wrap{display:none}
 @media (max-width:700px){
   .hero-mobile-quote{display:inline-flex!important}
+  .hero-img0-desktop-wrap{display:none!important}
+  .hero-img0-mobile-wrap{display:block!important}
   .hero-stats{padding:22px 14px 0!important}
   .hero-stats-grid{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;width:100%!important;gap:18px 12px!important;padding:20px 14px!important;border-radius:22px!important}
   .hero-stats-grid>span[style*="width:1px"]{display:none!important}
@@ -49,7 +52,8 @@ summary::-webkit-details-marker{display:none}
 
 <section aria-label="Hero" style="position:relative;min-height:clamp(560px,92vh,960px);display:grid;align-content:end;padding-bottom:0">
   <div style="position:absolute;inset:0;background:#0B0B0C;overflow:hidden">
-    <img src="{{ src0 }}" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:{{ disp0 }}" />
+    <div class="hero-img0-desktop-wrap"><img src="{{ src0 }}" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:{{ disp0 }}" /></div>
+    <div class="hero-img0-mobile-wrap"><img src="{{ src0m }}" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:{{ disp0 }}" /></div>
     <img src="{{ src1 }}" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:{{ disp1 }}" />
     <img src="{{ src2 }}" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:{{ disp2 }}" />
   </div>
@@ -389,6 +393,7 @@ class Component extends DCLogic {
       disp1: i === 1 ? 'block' : 'none',
       disp2: i === 2 ? 'block' : 'none',
       src0: this.heroGifs[0] + '?c=' + this.state.heroCycle,
+      src0m: 'assets/gifs/mobile version/hero_1_mobile.gif?c=' + this.state.heroCycle,
       src1: this.heroGifs[1] + '?c=' + this.state.heroCycle,
       src2: this.heroGifs[2] + '?c=' + this.state.heroCycle,
       heroKicker: s.kicker,

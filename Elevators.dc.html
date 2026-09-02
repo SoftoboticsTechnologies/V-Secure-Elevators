@@ -30,12 +30,18 @@ a{color:#C6A15B}
 a:hover{color:#E0C489}
 summary{list-style:none}
 summary::-webkit-details-marker{display:none}
+.hero-img-mobile{display:none}
+@media (max-width:700px){
+  .hero-img-desktop{display:none!important}
+  .hero-img-mobile{display:block!important}
+}
 </style>
 </helmet>
 <dc-import name="SiteNav" active="elevators" hint-size="100%,74px"></dc-import>
 
 <section aria-label="Page header" style="position:relative;min-height:clamp(620px,92vh,980px);display:grid;align-items:end;overflow:hidden">
-  <img src="assets/gifs/hero_3_.gif" alt="Elevator in motion" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover" />
+  <img class="hero-img-desktop" src="assets/gifs/hero_3_.gif" alt="Elevator in motion" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover" />
+  <img class="hero-img-mobile" src="assets/gifs/mobile version/hero_3_mobile.gif" alt="Elevator in motion" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover" />
   <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(11,11,12,0.7) 0%,rgba(11,11,12,0.45) 40%,rgba(11,11,12,0.95) 100%)"></div>
   <div style="position:relative;max-width:1320px;width:100%;margin:0 auto;padding:clamp(80px,11vw,140px) 24px clamp(40px,5vw,64px);display:grid;gap:26px">
     <span style="display:flex;align-items:center;gap:14px;color:#C6A15B;font-size:12.5px;letter-spacing:3.4px;text-transform:uppercase"><span style="width:44px;height:1px;background:#C6A15B"></span>Elevators</span>
