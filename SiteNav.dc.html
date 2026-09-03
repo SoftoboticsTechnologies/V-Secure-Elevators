@@ -12,25 +12,25 @@
 <helmet>
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
 <style>
 *{box-sizing:border-box}
 img{max-width:100%;height:auto}
 </style>
 </helmet>
-<header style="width:100%;font-family:'Open Sans',Helvetica,Arial,sans-serif;position:sticky;top:0;z-index:60;background:#0E141C">
+<header style="width:100%;font-family:'Open Sans',Helvetica,Arial,sans-serif;position:sticky;top:0;z-index:60;background:#171717">
   <nav style="max-width:1440px;margin:0 auto;padding:8px 26px;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:20px;min-height:82px">
     <ul style="display:{{ deskDisplay }};align-items:center;gap:22px;list-style:none;margin:0;padding:0">
       <li onMouseEnter="{{ openDrop }}" onMouseLeave="{{ closeDrop }}" style="position:relative;display:flex;align-items:center;align-self:stretch">
         <a href="Elevators.dc.html" style="display:flex;align-items:center;gap:8px;font-size:13px;font-weight:600;letter-spacing:1.1px;text-transform:uppercase;text-decoration:none;color:{{ cElevators }}" style-hover="color:#ffffff">Elevators <i class="fas fa-chevron-down" style="font-size:9px"></i></a>
         <sc-if value="{{ drop }}" hint-placeholder-val="{{ false }}">
-          <div style="position:absolute;top:100%;left:-14px;min-width:270px;background:#141C26;border-top:2px solid #1976D2;padding:10px 0;display:grid;box-shadow:0 20px 44px rgba(0,0,0,0.4)">
-            <a href="Elevators.dc.html#commercial" style="display:block;padding:14px 24px;font-size:12.5px;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:#D8DCE1;text-decoration:none" style-hover="background:#1C2530;color:#ffffff">Commercial Elevators</a>
-            <a href="Elevators.dc.html#residential" style="display:block;padding:14px 24px;font-size:12.5px;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:#D8DCE1;text-decoration:none" style-hover="background:#1C2530;color:#ffffff">Residential Elevators</a>
-            <a href="Elevators.dc.html#home" style="display:block;padding:14px 24px;font-size:12.5px;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:#D8DCE1;text-decoration:none" style-hover="background:#1C2530;color:#ffffff">Home Elevators</a>
-            <a href="Elevators.dc.html#goods" style="display:block;padding:14px 24px;font-size:12.5px;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:#D8DCE1;text-decoration:none" style-hover="background:#1C2530;color:#ffffff">Goods Elevators</a>
-            <a href="Elevators.dc.html#high-speed" style="display:block;padding:14px 24px;font-size:12.5px;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:#D8DCE1;text-decoration:none" style-hover="background:#1C2530;color:#ffffff">High-Speed Elevators</a>
+          <div style="position:absolute;top:100%;left:-14px;min-width:270px;background:#202020;border-top:2px solid #B08D57;padding:10px 0;display:grid;box-shadow:0 20px 44px rgba(0,0,0,0.4)">
+            <a href="Elevators.dc.html#commercial" style="display:block;padding:14px 24px;font-size:12.5px;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:#C9C9C9;text-decoration:none" style-hover="background:#262626;color:#ffffff">Commercial Elevators</a>
+            <a href="Elevators.dc.html#residential" style="display:block;padding:14px 24px;font-size:12.5px;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:#C9C9C9;text-decoration:none" style-hover="background:#262626;color:#ffffff">Residential Elevators</a>
+            <a href="Elevators.dc.html#home" style="display:block;padding:14px 24px;font-size:12.5px;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:#C9C9C9;text-decoration:none" style-hover="background:#262626;color:#ffffff">Home Elevators</a>
+            <a href="Elevators.dc.html#goods" style="display:block;padding:14px 24px;font-size:12.5px;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:#C9C9C9;text-decoration:none" style-hover="background:#262626;color:#ffffff">Goods Elevators</a>
+            <a href="Elevators.dc.html#high-speed" style="display:block;padding:14px 24px;font-size:12.5px;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:#C9C9C9;text-decoration:none" style-hover="background:#262626;color:#ffffff">High-Speed Elevators</a>
           </div>
         </sc-if>
       </li>
@@ -45,8 +45,8 @@ img{max-width:100%;height:auto}
     <div style="display:flex;align-items:center;justify-content:flex-end;gap:22px">
       <a href="Contact-Us.dc.html" style="display:{{ deskDisplay }};font-size:13px;font-weight:600;letter-spacing:1.1px;text-transform:uppercase;text-decoration:none;color:{{ cContact }}" style-hover="color:#ffffff">Contact Us</a>
       <a href="Clients.dc.html" style="display:{{ deskDisplay }};font-size:13px;font-weight:600;letter-spacing:1.1px;text-transform:uppercase;text-decoration:none;color:{{ cClients }}" style-hover="color:#ffffff">Clients</a>
-      <button type="button" onClick="{{ openQuote }}" style="display:{{ deskDisplay }};background:transparent;border:0;color:#ffffff;font-family:'Open Sans',Helvetica,Arial,sans-serif;font-size:13px;font-weight:600;letter-spacing:1.1px;text-transform:uppercase;cursor:pointer;padding:0" style-hover="color:#8FB6E8">Get Quote</button>
-      <button type="button" aria-label="Open menu" onClick="{{ toggle }}" style="background:transparent;border:0;padding:6px 0;cursor:pointer;display:{{ mobDisplay }};gap:6px;width:42px;justify-items:stretch">
+      <button type="button" onClick="{{ openQuote }}" style="display:{{ deskDisplay }};background:transparent;border:0;color:#ffffff;font-family:'Open Sans',Helvetica,Arial,sans-serif;font-size:13px;font-weight:600;letter-spacing:1.1px;text-transform:uppercase;cursor:pointer;padding:0" style-hover="color:#D9BC85">Get Quote</button>
+      <button type="button" aria-label="Open menu" onClick="{{ toggle }}" style="background:transparent;border:0;padding:6px 0;cursor:pointer;display:grid;gap:6px;width:32px;justify-items:stretch">
         <span style="display:block;height:2px;background:#ffffff"></span>
         <span style="display:block;height:2px;background:#ffffff"></span>
       </button>
@@ -55,9 +55,9 @@ img{max-width:100%;height:auto}
 </header>
 
 <sc-if value="{{ open }}" hint-placeholder-val="{{ false }}">
-  <div role="dialog" aria-label="Site menu" style="position:fixed;inset:0;z-index:100;background:#090D13;font-family:'Open Sans',Helvetica,Arial,sans-serif;overflow-y:auto;padding:26px 26px 60px">
+  <div role="dialog" aria-label="Site menu" style="position:fixed;inset:0;z-index:100;background:#101010;font-family:'Open Sans',Helvetica,Arial,sans-serif;overflow-y:auto;padding:26px 26px 60px">
     <div style="display:flex;justify-content:flex-end">
-      <button type="button" aria-label="Close menu" onClick="{{ toggle }}" style="width:56px;height:56px;border-radius:50%;border:1px solid #2A2E33;background:#141C26;color:#ffffff;font-size:19px;cursor:pointer" style-hover="background:#2A2E33">
+      <button type="button" aria-label="Close menu" onClick="{{ toggle }}" style="width:56px;height:56px;border-radius:50%;border:1px solid #303030;background:#202020;color:#ffffff;font-size:19px;cursor:pointer" style-hover="background:#303030">
         <i class="fas fa-xmark"></i>
       </button>
     </div>
@@ -66,87 +66,87 @@ img{max-width:100%;height:auto}
         <img src="uploads/V%20secure%20Elevators%20logo.png" alt="V Secure Elevators Pvt. Ltd. logo" style="height:64px;width:64px;object-fit:contain;border-radius:50%;background:#ffffff;padding:3px" />
       </a>
       <ul style="list-style:none;margin:0;padding:0;display:grid">
-        <li><a href="index.html" style="display:block;text-align:center;padding:24px 10px;font-family:'Poppins',Helvetica,sans-serif;font-size:clamp(17px,2.2vw,20px);color:#ffffff;text-decoration:none;border-bottom:1px solid #23262A" style-hover="color:#8FB6E8">Home</a></li>
-        <li><a href="About-Us.dc.html" style="display:block;text-align:center;padding:24px 10px;font-family:'Poppins',Helvetica,sans-serif;font-size:clamp(17px,2.2vw,20px);color:#ffffff;text-decoration:none;border-bottom:1px solid #23262A" style-hover="color:#8FB6E8">About Us</a></li>
-        <li><a href="Elevators.dc.html" style="display:block;text-align:center;padding:24px 10px;font-family:'Poppins',Helvetica,sans-serif;font-size:clamp(17px,2.2vw,20px);color:#ffffff;text-decoration:none;border-bottom:1px solid #23262A" style-hover="color:#8FB6E8">Elevators</a></li>
-        <li><a href="Services.dc.html" style="display:block;text-align:center;padding:24px 10px;font-family:'Poppins',Helvetica,sans-serif;font-size:clamp(17px,2.2vw,20px);color:#ffffff;text-decoration:none;border-bottom:1px solid #23262A" style-hover="color:#8FB6E8">Services</a></li>
-        <li><a href="Clients.dc.html" style="display:block;text-align:center;padding:24px 10px;font-family:'Poppins',Helvetica,sans-serif;font-size:clamp(17px,2.2vw,20px);color:#ffffff;text-decoration:none;border-bottom:1px solid #23262A" style-hover="color:#8FB6E8">Clients</a></li>
-        <li><a href="Contact-Us.dc.html" style="display:block;text-align:center;padding:24px 10px;font-family:'Poppins',Helvetica,sans-serif;font-size:clamp(17px,2.2vw,20px);color:#ffffff;text-decoration:none;border-bottom:1px solid #23262A" style-hover="color:#8FB6E8">Contact Us</a></li>
+        <li><a href="index.html" style="display:block;text-align:center;padding:24px 10px;font-family:'Open Sans',Helvetica,sans-serif;font-size:clamp(17px,2.2vw,20px);color:#ffffff;text-decoration:none;border-bottom:1px solid #2A2A2A" style-hover="color:#D9BC85">Home</a></li>
+        <li><a href="About-Us.dc.html" style="display:block;text-align:center;padding:24px 10px;font-family:'Open Sans',Helvetica,sans-serif;font-size:clamp(17px,2.2vw,20px);color:#ffffff;text-decoration:none;border-bottom:1px solid #2A2A2A" style-hover="color:#D9BC85">About Us</a></li>
+        <li><a href="Elevators.dc.html" style="display:block;text-align:center;padding:24px 10px;font-family:'Open Sans',Helvetica,sans-serif;font-size:clamp(17px,2.2vw,20px);color:#ffffff;text-decoration:none;border-bottom:1px solid #2A2A2A" style-hover="color:#D9BC85">Elevators</a></li>
+        <li><a href="Services.dc.html" style="display:block;text-align:center;padding:24px 10px;font-family:'Open Sans',Helvetica,sans-serif;font-size:clamp(17px,2.2vw,20px);color:#ffffff;text-decoration:none;border-bottom:1px solid #2A2A2A" style-hover="color:#D9BC85">Services</a></li>
+        <li><a href="Clients.dc.html" style="display:block;text-align:center;padding:24px 10px;font-family:'Open Sans',Helvetica,sans-serif;font-size:clamp(17px,2.2vw,20px);color:#ffffff;text-decoration:none;border-bottom:1px solid #2A2A2A" style-hover="color:#D9BC85">Clients</a></li>
+        <li><a href="Contact-Us.dc.html" style="display:block;text-align:center;padding:24px 10px;font-family:'Open Sans',Helvetica,sans-serif;font-size:clamp(17px,2.2vw,20px);color:#ffffff;text-decoration:none;border-bottom:1px solid #2A2A2A" style-hover="color:#D9BC85">Contact Us</a></li>
       </ul>
       <div style="display:flex;flex-wrap:wrap;gap:14px;justify-content:center;padding-top:34px">
-        <button type="button" onClick="{{ openQuote }}" style="background:#ffffff;border:0;color:#0E141C;font-family:'Poppins',Helvetica,sans-serif;font-weight:600;font-size:15px;padding:16px 28px;cursor:pointer;border-radius:4px">Get a Free Quote</button>
-        <a href="https://wa.me/919148780701" target="_blank" rel="noopener" style="display:flex;align-items:center;gap:10px;border:1px solid #2A2E33;color:#ffffff;font-family:'Poppins',Helvetica,sans-serif;font-weight:600;font-size:15px;padding:16px 28px;text-decoration:none;border-radius:4px" style-hover="border-color:#ffffff"><i class="fab fa-whatsapp" style="font-size:18px;color:#25D366"></i>+91 9148780701</a>
+        <button type="button" onClick="{{ openQuote }}" style="background:#ffffff;border:0;color:#171717;font-family:'Open Sans',Helvetica,sans-serif;font-weight:600;font-size:15px;padding:16px 28px;cursor:pointer;border-radius:4px">Get a Free Quote</button>
+        <a href="https://wa.me/919148780701" target="_blank" rel="noopener" style="display:flex;align-items:center;gap:10px;border:1px solid #303030;color:#ffffff;font-family:'Open Sans',Helvetica,sans-serif;font-weight:600;font-size:15px;padding:16px 28px;text-decoration:none;border-radius:4px" style-hover="border-color:#ffffff"><i class="fab fa-whatsapp" style="font-size:18px;color:#25D366"></i>+91 9148780701</a>
       </div>
     </div>
   </div>
 </sc-if>
 
 <sc-if value="{{ quote }}" hint-placeholder-val="{{ false }}">
-  <div role="dialog" aria-label="Request a quote" style="position:fixed;inset:0;z-index:110;background:rgba(7,10,15,0.82);display:flex;align-items:flex-start;justify-content:center;padding:24px;overflow-y:auto;font-family:'Jost',Helvetica,Arial,sans-serif;font-weight:300">
-    <form onSubmit="{{ submitQuote }}" style="background:#161617;width:100%;max-width:620px;border-radius:34px;padding:clamp(28px,4vw,52px);display:grid;gap:20px;margin:auto">
+  <div role="dialog" aria-label="Request a quote" style="position:fixed;inset:0;z-index:110;background:rgba(7,10,15,0.82);display:flex;align-items:flex-start;justify-content:center;padding:24px;overflow-y:auto;font-family:'Open Sans',Helvetica,Arial,sans-serif;font-weight:300">
+    <form onSubmit="{{ submitQuote }}" style="background:#1A1A1A;width:100%;max-width:620px;border-radius:34px;padding:clamp(28px,4vw,52px);display:grid;gap:20px;margin:auto">
       <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:16px">
-        <h2 style="margin:0;font-family:'Marcellus',Georgia,serif;font-weight:400;color:#F7F5F1;font-size:clamp(28px,4vw,44px);line-height:1.14">Let's <em style="color:#C6A15B;font-style:italic">Connect Now</em></h2>
-        <button type="button" aria-label="Close" onClick="{{ closeQuote }}" style="background:transparent;border:1px solid rgba(243,240,234,0.28);width:42px;height:42px;border-radius:50%;color:#CFCBC4;font-size:15px;cursor:pointer;flex-shrink:0;display:inline-flex;align-items:center;justify-content:center;padding:0" style-hover="border-color:#C6A15B;color:#C6A15B">
+        <h2 style="margin:0;font-family:'Cormorant Garamond',Georgia,serif;font-weight:400;color:#F8F8F8;font-size:clamp(28px,4vw,44px);line-height:1.14">Let's <em style="color:#B08D57;font-style:italic">Connect Now</em></h2>
+        <button type="button" aria-label="Close" onClick="{{ closeQuote }}" style="background:transparent;border:1px solid rgba(243,240,234,0.28);width:42px;height:42px;border-radius:50%;color:#CACACA;font-size:15px;cursor:pointer;flex-shrink:0;display:inline-flex;align-items:center;justify-content:center;padding:0" style-hover="border-color:#B08D57;color:#B08D57">
           <i class="fas fa-xmark"></i>
         </button>
       </div>
       <div style="border:1px solid rgba(243,240,234,0.28);border-radius:0 0 18px 18px;border-top:0;padding:26px 20px 12px;position:relative">
-        <span style="position:absolute;top:9px;left:20px;font-size:13.5px;color:#B7B3AB">Name</span>
-        <input type="text" name="name" required="required" style="width:100%;background:transparent;border:0;outline:none;color:#F3F0EA;font-family:'Jost',sans-serif;font-size:16px;padding:0" />
+        <span style="position:absolute;top:9px;left:20px;font-size:13.5px;color:#B5B5B5">Name</span>
+        <input type="text" name="name" required="required" style="width:100%;background:transparent;border:0;outline:none;color:#F5F5F5;font-family:'Open Sans',sans-serif;font-size:16px;padding:0" />
       </div>
       <div style="border:1px solid rgba(243,240,234,0.28);border-radius:0 0 18px 18px;border-top:0;padding:26px 20px 12px;position:relative">
-        <span style="position:absolute;top:9px;left:20px;font-size:13.5px;color:#B7B3AB">Email Address</span>
-        <input type="email" name="email" required="required" style="width:100%;background:transparent;border:0;outline:none;color:#F3F0EA;font-family:'Jost',sans-serif;font-size:16px;padding:0" />
+        <span style="position:absolute;top:9px;left:20px;font-size:13.5px;color:#B5B5B5">Email Address</span>
+        <input type="email" name="email" required="required" style="width:100%;background:transparent;border:0;outline:none;color:#F5F5F5;font-family:'Open Sans',sans-serif;font-size:16px;padding:0" />
       </div>
       <div style="border:1px solid rgba(243,240,234,0.28);border-radius:0 0 18px 18px;border-top:0;padding:26px 20px 12px;position:relative">
-        <span style="position:absolute;top:9px;left:20px;font-size:13.5px;color:#B7B3AB">Phone</span>
-        <input type="tel" name="phone" required="required" style="width:100%;background:transparent;border:0;outline:none;color:#F3F0EA;font-family:'Jost',sans-serif;font-size:16px;padding:0" />
+        <span style="position:absolute;top:9px;left:20px;font-size:13.5px;color:#B5B5B5">Phone</span>
+        <input type="tel" name="phone" required="required" style="width:100%;background:transparent;border:0;outline:none;color:#F5F5F5;font-family:'Open Sans',sans-serif;font-size:16px;padding:0" />
       </div>
       <div style="border:1px solid rgba(243,240,234,0.28);border-radius:0 0 18px 18px;border-top:0;padding:26px 20px 12px;position:relative">
-        <span style="position:absolute;top:9px;left:20px;font-size:13.5px;color:#B7B3AB">Project Timeline</span>
-        <select name="timeline" style="width:100%;background:transparent;border:0;outline:none;color:#F3F0EA;font-family:'Jost',sans-serif;font-size:16px;padding:0;appearance:none;cursor:pointer">
-          <option style="background:#121A24">Ready to proceed now</option>
-          <option style="background:#121A24">3-6 months</option>
-          <option style="background:#121A24">6-12 months</option>
+        <span style="position:absolute;top:9px;left:20px;font-size:13.5px;color:#B5B5B5">Project Timeline</span>
+        <select name="timeline" style="width:100%;background:transparent;border:0;outline:none;color:#F5F5F5;font-family:'Open Sans',sans-serif;font-size:16px;padding:0;appearance:none;cursor:pointer">
+          <option style="background:#1E1E1E">Ready to proceed now</option>
+          <option style="background:#1E1E1E">3-6 months</option>
+          <option style="background:#1E1E1E">6-12 months</option>
         </select>
-        <i class="fas fa-chevron-down" style="position:absolute;right:20px;bottom:14px;color:#B7B3AB;font-size:11px;pointer-events:none"></i>
+        <i class="fas fa-chevron-down" style="position:absolute;right:20px;bottom:14px;color:#B5B5B5;font-size:11px;pointer-events:none"></i>
       </div>
       <div style="border:1px solid rgba(243,240,234,0.28);border-radius:0 0 18px 18px;border-top:0;padding:26px 20px 12px;position:relative">
-        <span style="position:absolute;top:9px;left:20px;font-size:13.5px;color:#B7B3AB">Property Type</span>
-        <select name="property" style="width:100%;background:transparent;border:0;outline:none;color:#F3F0EA;font-family:'Jost',sans-serif;font-size:16px;padding:0;appearance:none;cursor:pointer">
-          <option style="background:#121A24">Residential villa</option>
-          <option style="background:#121A24">Apartment building</option>
-          <option style="background:#121A24">Commercial office</option>
-          <option style="background:#121A24">Institutional</option>
-          <option style="background:#121A24">Industrial / warehouse</option>
+        <span style="position:absolute;top:9px;left:20px;font-size:13.5px;color:#B5B5B5">Property Type</span>
+        <select name="property" style="width:100%;background:transparent;border:0;outline:none;color:#F5F5F5;font-family:'Open Sans',sans-serif;font-size:16px;padding:0;appearance:none;cursor:pointer">
+          <option style="background:#1E1E1E">Residential villa</option>
+          <option style="background:#1E1E1E">Apartment building</option>
+          <option style="background:#1E1E1E">Commercial office</option>
+          <option style="background:#1E1E1E">Institutional</option>
+          <option style="background:#1E1E1E">Industrial / warehouse</option>
         </select>
-        <i class="fas fa-chevron-down" style="position:absolute;right:20px;bottom:14px;color:#B7B3AB;font-size:11px;pointer-events:none"></i>
+        <i class="fas fa-chevron-down" style="position:absolute;right:20px;bottom:14px;color:#B5B5B5;font-size:11px;pointer-events:none"></i>
       </div>
       <div style="border:1px solid rgba(243,240,234,0.28);border-radius:0 0 18px 18px;border-top:0;padding:26px 20px 12px;position:relative">
-        <span style="position:absolute;top:9px;left:20px;font-size:13.5px;color:#B7B3AB">Number of Lifts Required</span>
-        <select name="lifts" style="width:100%;background:transparent;border:0;outline:none;color:#F3F0EA;font-family:'Jost',sans-serif;font-size:16px;padding:0;appearance:none;cursor:pointer">
-          <option style="background:#121A24">1</option>
-          <option style="background:#121A24">2</option>
-          <option style="background:#121A24">3+</option>
+        <span style="position:absolute;top:9px;left:20px;font-size:13.5px;color:#B5B5B5">Number of Lifts Required</span>
+        <select name="lifts" style="width:100%;background:transparent;border:0;outline:none;color:#F5F5F5;font-family:'Open Sans',sans-serif;font-size:16px;padding:0;appearance:none;cursor:pointer">
+          <option style="background:#1E1E1E">1</option>
+          <option style="background:#1E1E1E">2</option>
+          <option style="background:#1E1E1E">3+</option>
         </select>
-        <i class="fas fa-chevron-down" style="position:absolute;right:20px;bottom:14px;color:#B7B3AB;font-size:11px;pointer-events:none"></i>
+        <i class="fas fa-chevron-down" style="position:absolute;right:20px;bottom:14px;color:#B5B5B5;font-size:11px;pointer-events:none"></i>
       </div>
       <div style="border:1px solid rgba(243,240,234,0.28);border-radius:0 0 18px 18px;border-top:0;padding:26px 20px 12px;position:relative">
-        <span style="position:absolute;top:9px;left:20px;font-size:13.5px;color:#B7B3AB">City / Location of Project</span>
-        <select name="city" style="width:100%;background:transparent;border:0;outline:none;color:#F3F0EA;font-family:'Jost',sans-serif;font-size:16px;padding:0;appearance:none;cursor:pointer">
-          <option style="background:#121A24">Bangalore</option>
-          <option style="background:#121A24">Elsewhere in Karnataka</option>
-          <option style="background:#121A24">Outside Karnataka</option>
+        <span style="position:absolute;top:9px;left:20px;font-size:13.5px;color:#B5B5B5">City / Location of Project</span>
+        <select name="city" style="width:100%;background:transparent;border:0;outline:none;color:#F5F5F5;font-family:'Open Sans',sans-serif;font-size:16px;padding:0;appearance:none;cursor:pointer">
+          <option style="background:#1E1E1E">Bangalore</option>
+          <option style="background:#1E1E1E">Elsewhere in Karnataka</option>
+          <option style="background:#1E1E1E">Outside Karnataka</option>
         </select>
-        <i class="fas fa-chevron-down" style="position:absolute;right:20px;bottom:14px;color:#B7B3AB;font-size:11px;pointer-events:none"></i>
+        <i class="fas fa-chevron-down" style="position:absolute;right:20px;bottom:14px;color:#B5B5B5;font-size:11px;pointer-events:none"></i>
       </div>
       <div style="border:1px solid rgba(243,240,234,0.28);border-radius:0 0 18px 18px;border-top:0;padding:26px 20px 12px;position:relative">
-        <span style="position:absolute;top:9px;left:20px;font-size:13.5px;color:#B7B3AB">Message</span>
-        <textarea name="message" rows="4" style="width:100%;background:transparent;border:0;outline:none;resize:vertical;color:#F3F0EA;font-family:'Jost',sans-serif;font-size:16px;padding:0"></textarea>
+        <span style="position:absolute;top:9px;left:20px;font-size:13.5px;color:#B5B5B5">Message</span>
+        <textarea name="message" rows="4" style="width:100%;background:transparent;border:0;outline:none;resize:vertical;color:#F5F5F5;font-family:'Open Sans',sans-serif;font-size:16px;padding:0"></textarea>
       </div>
-      <button type="submit" disabled="{{ quoteSending }}" style="justify-self:start;background:#C6A15B;border:0;color:#0A0F16;font-family:'Jost',sans-serif;font-size:16px;padding:17px 34px;border-radius:999px;cursor:pointer;margin-top:8px" style-hover="background:#E0C489">{{ quoteSubmitLabel }}</button>
+      <button type="submit" disabled="{{ quoteSending }}" style="justify-self:start;background:#B08D57;border:0;color:#121212;font-family:'Open Sans',sans-serif;font-size:16px;padding:17px 34px;border-radius:999px;cursor:pointer;margin-top:8px" style-hover="background:#CBAE79">{{ quoteSubmitLabel }}</button>
       <sc-if value="{{ quoteSent }}" hint-placeholder-val="{{ false }}">
-        <p style="margin:0;font-size:14.5px;color:#C6A15B">Thank you. Your enquiry has been noted and our team will respond within one working day.</p>
+        <p style="margin:0;font-size:14.5px;color:#B08D57">Thank you. Your enquiry has been noted and our team will respond within one working day.</p>
       </sc-if>
       <sc-if value="{{ quoteError }}" hint-placeholder-val="{{ false }}">
         <p style="margin:0;font-size:14.5px;color:#E5716B">Something went wrong sending your enquiry. Please try again or reach us directly by phone or WhatsApp.</p>
@@ -362,7 +362,7 @@ class Component extends DCLogic {
     el.id = 'vs-cursor';
     el.setAttribute('aria-hidden', 'true');
     el.style.cssText = 'position:fixed;top:0;left:0;width:48px;height:48px;border-radius:50%;border:2px solid #FFC53D;background:transparent;box-shadow:0 0 10px rgba(255,197,61,0.7),0 0 18px rgba(255,178,20,0.35);display:flex;align-items:center;justify-content:center;pointer-events:none;z-index:2147483647;opacity:0;transform:translate3d(-100px,-100px,0);transition:opacity 200ms ease,width 200ms ease,height 200ms ease,box-shadow 200ms ease;will-change:transform';
-    el.innerHTML = '<svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="#E8E8EA" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" style="position:relative"><path d="M7 17 L17 7"></path><path d="M9.5 7 H17 V14.5"></path></svg>';
+    el.innerHTML = '<svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="#EAEAEA" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" style="position:relative"><path d="M7 17 L17 7"></path><path d="M9.5 7 H17 V14.5"></path></svg>';
     document.body.appendChild(el);
     this._cursor = el;
     let x = -100, y = -100, cx = -100, cy = -100;
@@ -387,7 +387,7 @@ class Component extends DCLogic {
   renderVals() {
     const mobile = this.state.w <= 860;
     const active = this.props.active || 'home';
-    const c = (k) => (active === k ? '#ffffff' : '#B9BFC6');
+    const c = (k) => (active === k ? '#ffffff' : '#B5B5B5');
     return {
       open: this.state.open,
       quote: this.state.quote,

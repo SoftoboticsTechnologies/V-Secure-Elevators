@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
 <style>
 .vs-float-wrap{position:fixed;right:20px;bottom:20px;z-index:900;display:flex;flex-direction:column;align-items:center;gap:12px}
-.vs-back-to-top{position:fixed;left:20px;bottom:20px;z-index:900;width:52px;height:52px;border-radius:50%;border:1px solid #C6A15B;background:#0A0F16;color:#C6A15B;font-size:17px;cursor:pointer;box-shadow:0 6px 20px rgba(0,0,0,0.5);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.vs-back-to-top{position:fixed;left:20px;bottom:20px;z-index:900;width:52px;height:52px;border-radius:50%;border:1px solid #B08D57;background:#121212;color:#B08D57;font-size:17px;cursor:pointer;box-shadow:0 6px 20px rgba(0,0,0,0.5);display:flex;align-items:center;justify-content:center;flex-shrink:0}
 .vs-whatsapp{width:58px;height:58px;border-radius:50%;background:#25D366;color:#ffffff;font-size:29px;display:flex;align-items:center;justify-content:center;text-decoration:none;box-shadow:0 6px 18px rgba(5,80,40,0.35);flex-shrink:0}
 @media (max-width:600px){
   .vs-float-wrap{right:14px;bottom:14px}
@@ -23,7 +23,7 @@
 </helmet>
 <div>
   <sc-if value="{{ scrolled }}" hint-placeholder-val="{{ false }}">
-    <button type="button" aria-label="Back to top" onClick="{{ toTop }}" class="vs-back-to-top" style-hover="background:#C6A15B;color:#0A0F16">
+    <button type="button" aria-label="Back to top" onClick="{{ toTop }}" class="vs-back-to-top" style-hover="background:#B08D57;color:#121212">
       <i class="fas fa-arrow-up"></i>
     </button>
   </sc-if>
