@@ -6,22 +6,25 @@ img, video, iframe { max-width: 100%; }
 @media (max-width: 700px) {
   body { min-width: 0; }
 
-  /* The site uses inline auto-fit grids; their desktop minimums are too wide for phones. */
-  [style*="minmax(320px,1fr)"],
-  [style*="minmax(300px,1fr)"],
-  [style*="minmax(280px,1fr)"],
-  [style*="minmax(260px,1fr)"],
-  [style*="minmax(250px,1fr)"],
-  [style*="minmax(240px,1fr)"],
-  [style*="minmax(230px,1fr)"],
-  [style*="minmax(220px,1fr)"],
-  [style*="minmax(210px,1fr)"],
-  [style*="minmax(200px,1fr)"] {
+  /* The site renders these inline styles through a React runtime, which re-serialises the
+     "style" attribute (e.g. "minmax(320px,1fr)" becomes "minmax(320px, 1fr)"). Attribute
+     selectors here intentionally stop right before any comma/colon so they keep matching
+     regardless of that re-serialisation. */
+  [style*="minmax(320px"],
+  [style*="minmax(300px"],
+  [style*="minmax(280px"],
+  [style*="minmax(260px"],
+  [style*="minmax(250px"],
+  [style*="minmax(240px"],
+  [style*="minmax(230px"],
+  [style*="minmax(220px"],
+  [style*="minmax(210px"],
+  [style*="minmax(200px"] {
     grid-template-columns: minmax(0, 1fr) !important;
   }
 
   header nav { min-height: 62px !important; padding: 0 18px !important; gap: 12px !important; }
-  header nav img { height: 34px !important; }
+  header nav img { height: 34px !important; width: 34px !important; }
   .vs-nav-cin { display: none !important; }
 
   section[aria-label="Hero"] { min-height: 0 !important; display: block !important; padding-bottom: 78px !important; }
@@ -33,7 +36,7 @@ img, video, iframe { max-width: 100%; }
   .hero-stats-grid { width: 100% !important; border-radius: 22px !important; padding: 20px 14px !important; gap: 18px 12px !important; display: grid !important; grid-template-columns: repeat(2, minmax(0, 1fr)) !important; justify-content: stretch !important; }
   .hero-stats-grid > div { min-width: 0; min-height: 92px; width: auto !important; }
   .hero-stats-grid > div:first-child { width: 94px !important; height: 94px !important; min-height: 94px; justify-self: center; }
-  .hero-stats-grid > span[style*="width:1px"] { display: none !important; }
+  .hero-stats-grid > span[style*="1px"] { display: none !important; }
   section[aria-label="Hero"] > div:nth-of-type(5) { right: 16px !important; bottom: 16px !important; }
   section[aria-label="Hero"] > div:nth-of-type(5) button { width: 46px !important; height: 46px !important; }
 
@@ -41,14 +44,11 @@ img, video, iframe { max-width: 100%; }
   section[aria-label="Page header"] > div:last-child { padding-left: 20px !important; padding-right: 20px !important; }
   section[aria-label="Page header"] h1 { font-size: 36px !important; }
 
-  [style*="padding:clamp(56px,7vw,100px) 24px"],
-  [style*="padding:clamp(60px,8vw,110px) 24px"],
-  [style*="padding:clamp(64px,8vw,120px) 24px"],
-  [style*="padding:clamp(70px,10vw,120px) 24px"],
-  [style*="padding:clamp(80px,11vw,140px) 24px"] { padding-left: 20px !important; padding-right: 20px !important; }
-
-  [style*="grid-template-columns:1fr 1fr"] { grid-template-columns: 1fr !important; }
-  [style*="grid-template-columns:1fr 1fr"] > img[style*="margin-top:38px"] { margin-top: 0 !important; }
+  /* Every "max-width:1320px" content wrapper pairs it with 24px of horizontal padding,
+     except the footer copyright bar (excluded below, it reserves space for the floating
+     WhatsApp button). Match on "1320px" alone since "max-width:1320px" would otherwise
+     need to survive the colon-spacing the runtime adds when it re-serialises styles. */
+  [style*="1320px"]:not([style*="clamp(90px"]) { padding-left: 20px !important; padding-right: 20px !important; }
 
   form { border-radius: 20px !important; }
   input, select, textarea { font-size: 16px !important; }
