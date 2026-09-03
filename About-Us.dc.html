@@ -168,13 +168,19 @@ summary::-webkit-details-marker{display:none}
 class Component extends DCLogic {
   state = { i: 0, svcMuted: true };
   count = 5;
-  componentDidMount() { this.iv = setInterval(() => this.setState({ i: (this.state.i + 1) % this.count }), 1500); }
+  componentDidMount() { this.iv = setInterval(() => this.setState({ i: (this.state.i + 1) % this.count }), 1500); this.syncSvcVideo(); }
+  componentDidUpdate() { this.syncSvcVideo(); }
   componentWillUnmount() { clearInterval(this.iv); }
   toggleSvcMute() {
+    this.setState({ svcMuted: !this.state.svcMuted });
+  }
+  syncSvcVideo() {
     const video = document.getElementById('vs-svc-video-about');
-    const next = !this.state.svcMuted;
-    if (video) { video.muted = next; if (!next) { video.play(); } }
-    this.setState({ svcMuted: next });
+    if (!video) return;
+    if (video.muted !== this.state.svcMuted) {
+      video.muted = this.state.svcMuted;
+      if (!this.state.svcMuted) { video.play(); }
+    }
   }
   renderVals() {
     const i = this.state.i;

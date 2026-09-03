@@ -369,10 +369,16 @@ summary::-webkit-details-marker{display:none}
 class Component extends DCLogic {
   state = { sent: false, hero: 0, heroCycle: 0, r: 0, w: 0, svcMuted: true };
   toggleSvcMute() {
-    const video = document.getElementById('vs-svc-video-home');
     const next = !this.state.svcMuted;
-    if (video) { video.muted = next; if (!next) { video.play(); } }
     this.setState({ svcMuted: next });
+  }
+  syncSvcVideo() {
+    const video = document.getElementById('vs-svc-video-home');
+    if (!video) return;
+    if (video.muted !== this.state.svcMuted) {
+      video.muted = this.state.svcMuted;
+      if (!this.state.svcMuted) { video.play(); }
+    }
   }
   rCount = 6;
   wCount = 6;
@@ -389,10 +395,12 @@ class Component extends DCLogic {
     this.wiv = setInterval(() => this.setState({ w: (this.state.w + 1) % this.wCount }), 1500);
     this.riv = setInterval(() => this.setState({ r: (this.state.r + 1) % this.rCount }), 2000);
     this.scheduleHero();
+    this.syncSvcVideo();
   }
   componentDidUpdate() {
     if (this.lastHero !== this.state.hero) { this.lastHero = this.state.hero; this.scheduleHero(); }
     this.applyStatsLayout();
+    this.syncSvcVideo();
   }
   componentWillUnmount() { clearInterval(this.wiv); clearInterval(this.riv); clearTimeout(this.hiv); window.removeEventListener('resize', this._resizeStats); }
 
