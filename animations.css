@@ -21,3 +21,14 @@
 @media (prefers-reduced-motion: reduce) {
   [data-vs-animate] { opacity: 1 !important; transform: none !important; transition: none !important; }
 }
+
+@keyframes vsSoundHintPulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.6; transform: scale(0.97); }
+}
+.vs-sound-hint {
+  animation: vsSoundHintPulse 1.8s ease-in-out infinite;
+}
+@media (prefers-reduced-motion: reduce) {
+  .vs-sound-hint { animation: none; }
+}

@@ -164,7 +164,7 @@ class Component extends DCLogic {
     window.addEventListener('resize', this._r);
     this._initCursor();
     this._initReveal();
-    this._muteAll = () => document.querySelectorAll('video').forEach(v => { v.muted = true; v.defaultMuted = true; v.volume = 0; v.setAttribute('muted', ''); v.removeAttribute('controls');
+    this._muteAll = () => document.querySelectorAll('video:not([data-vs-allow-sound])').forEach(v => { v.muted = true; v.defaultMuted = true; v.volume = 0; v.setAttribute('muted', ''); v.removeAttribute('controls');
       const at = v.audioTracks; if (at) { for (let i = 0; i < at.length; i++) at[i].enabled = false; } });
     this._muteAll();
     this._muteIv = setInterval(this._muteAll, 6000);

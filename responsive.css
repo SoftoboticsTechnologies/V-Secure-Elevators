@@ -56,7 +56,7 @@ img, video, iframe { max-width: 100%; }
   footer > div:first-child { padding: 44px 20px 30px !important; gap: 34px !important; }
   footer > div:last-child > div { padding: 18px 20px !important; align-items: flex-start; flex-direction: column; }
 
-  section[aria-label="What sets us apart"] [style*="aspect-ratio:16/9"] { max-width: 100% !important; }
+  section[aria-label="What sets us apart"] [style*="aspect-ratio:16/9"] { max-width: 100% !important; width: 100% !important; margin-left: 0 !important; margin-right: 0 !important; border-radius: 26px !important; aspect-ratio: 2 / 3 !important; }
 
   section[aria-label="Elevator standards EN 81-20 and EN 81-50"] img { height: auto !important; width: min(320px, 78%) !important; }
 

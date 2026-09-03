@@ -50,7 +50,7 @@
     if (at) { for (let i = 0; i < at.length; i++) at[i].enabled = false; }
   };
   componentDidMount() {
-    this._m = () => document.querySelectorAll('video').forEach(v => {
+    this._m = () => document.querySelectorAll('video:not([data-vs-allow-sound])').forEach(v => {
       v.muted = true; v.volume = 0;
       if (v.paused && v.autoplay) { const p = v.play(); if (p && p.catch) p.catch(() => {}); }
     });
