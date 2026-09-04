@@ -521,7 +521,7 @@ class Component extends DCLogic {
       w3: this.state.w === 3 ? 1 : 0,
       w4: this.state.w === 4 ? 1 : 0,
       w5: this.state.w === 5 ? 1 : 0,
-      rTrack: 'translateX(calc(-1 * ' + Math.max(0, Math.min(this.state.r - 1, this.rCount - 3)) + ' * (31.5% + clamp(14px,1.8vw,26px))))',
+      rTrack: 'translateX(calc(-1 * ' + Math.max(0, Math.min(this.state.r - 1, this.rCount - 3)) + ' * (clamp(260px,31.5%,440px) + clamp(14px,1.8vw,26px))))',
       rPrev: () => this.stepRange(-1),
       rNext: () => this.stepRange(1),
       prevHero: () => this.setState((s) => ({ hero: (s.hero - 1 + n) % n, heroCycle: s.heroCycle + 1 })),
