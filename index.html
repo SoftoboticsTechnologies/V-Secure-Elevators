@@ -208,6 +208,140 @@ summary::-webkit-details-marker{display:none}
   </div>
 </section>
 
+<section aria-label="Safety features" style="max-width:1520px;margin:0 auto;padding:clamp(40px,5vw,64px) clamp(24px,6vw,90px);display:grid;grid-template-columns:minmax(320px,460px) 1fr;gap:clamp(28px,3.6vw,56px);align-items:stretch">
+  <div onClick="{{ safetyToggleMute }}" style="position:relative;width:100%;height:100%;min-height:700px;border-radius:20px;overflow:hidden;background:#FDFBF6;border:1px solid rgba(198,161,91,0.25);cursor:pointer">
+    <video id="vs-safety-video-home" src="assets/vedios/safety.mp4" autoplay loop playsinline style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block" data-vs-allow-sound></video>
+    <button type="button" onClick="{{ safetyStopAndToggleMute }}" aria-label="{{ safetyMuteLabel }}" style="position:absolute;right:16px;bottom:16px;width:46px;height:46px;border-radius:50%;border:1px solid rgba(198,161,91,0.6);background:rgba(7,29,58,0.75);color:#C6A15B;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:16px;z-index:2">
+      <i class="{{ safetyMuteIconClass }}"></i>
+    </button>
+    <div class="vs-sound-hint" style="display:{{ safetySoundHintDisplay }};position:absolute;left:16px;bottom:16px;align-items:center;gap:8px;background:rgba(7,29,58,0.8);border:1px solid rgba(198,161,91,0.45);color:#F7FAFD;padding:9px 16px;border-radius:999px;font-size:12.5px;letter-spacing:0.3px;pointer-events:none;z-index:2"><i class="fas fa-volume-high" style="color:#C6A15B;font-size:12px"></i>Tap for sound</div>
+  </div>
+  <div style="display:grid;gap:22px">
+    <span style="display:flex;align-items:center;gap:14px;color:#C6A15B;font-size:12.5px;letter-spacing:3.4px;text-transform:uppercase"><span style="width:44px;height:1px;background:#C6A15B"></span>Built for protection</span>
+    <h2 style="margin:0;font-family:'Cormorant Garamond',Georgia,serif;font-weight:400;color:#0D3B6E;font-size:clamp(26px,3.6vw,42px);line-height:1.16">Safety Features</h2>
+    <p style="margin:0;font-size:14.5px;line-height:1.75;color:#5A6B84;max-width:44em">Every elevator we install carries a full suite of protective systems. Tap any feature below to see how it keeps your passengers safe.</p>
+    <div style="display:grid;gap:12px">
+      <details class="vs-safety-item" style="background:#FDFBF6;border:1px solid rgba(198,161,91,0.22);border-radius:16px;padding:16px 18px">
+        <summary style="display:flex;align-items:center;gap:14px;cursor:pointer;list-style:none">
+          <span style="display:flex;align-items:center;justify-content:center;width:42px;height:42px;flex-shrink:0;border-radius:12px;background:linear-gradient(135deg,rgba(198,161,91,0.18),rgba(198,161,91,0.05));border:1px solid rgba(198,161,91,0.35)"><i class="fas fa-gauge-high" style="color:#C6A15B;font-size:15px"></i></span>
+          <span style="flex:1;font-size:15px;font-weight:600;color:#0D3B6E;letter-spacing:0.2px">UCM &amp; Over Speed Governor</span>
+          <i class="fas fa-chevron-down vs-safety-chev" style="color:#C6A15B;font-size:12px;flex-shrink:0"></i>
+        </summary>
+        <div style="display:grid;grid-template-columns:110px 1fr;gap:16px;margin-top:14px;align-items:center">
+          <img src="uploads/WhatsApp%20Image%202026-09-01%20at%201.23.39%20PM.jpeg" alt="Elevator car frame and guide rails" style="width:100%;height:90px;object-fit:cover;border-radius:12px;display:block" />
+          <p style="margin:0;font-size:13.5px;line-height:1.7;color:#000000">Detects any Unintended Car Movement with the doors open and applies the brake instantly, while the Over Speed Governor stops the car if it ever exceeds a safe speed. Together they prevent falls and runaway cars, keeping every entry and exit safe.</p>
+        </div>
+      </details>
+      <details class="vs-safety-item" style="background:#FDFBF6;border:1px solid rgba(198,161,91,0.22);border-radius:16px;padding:16px 18px">
+        <summary style="display:flex;align-items:center;gap:14px;cursor:pointer;list-style:none">
+          <span style="display:flex;align-items:center;justify-content:center;width:42px;height:42px;flex-shrink:0;border-radius:12px;background:linear-gradient(135deg,rgba(198,161,91,0.18),rgba(198,161,91,0.05));border:1px solid rgba(198,161,91,0.35)"><i class="fas fa-plug-circle-bolt" style="color:#C6A15B;font-size:15px"></i></span>
+          <span style="flex:1;font-size:15px;font-weight:600;color:#0D3B6E;letter-spacing:0.2px">ARD (Automatic Rescue Device)</span>
+          <i class="fas fa-chevron-down vs-safety-chev" style="color:#C6A15B;font-size:12px;flex-shrink:0"></i>
+        </summary>
+        <div style="display:grid;grid-template-columns:110px 1fr;gap:16px;margin-top:14px;align-items:center">
+          <img src="uploads/WhatsApp%20Image%202026-09-01%20at%201.24.18%20PM.jpeg" alt="Elevator machine room equipment" style="width:100%;height:90px;object-fit:cover;border-radius:12px;display:block" />
+          <p style="margin:0;font-size:13.5px;line-height:1.7;color:#000000">The moment mains power fails, the ARD switches to battery backup, glides the car to the nearest floor and opens the doors automatically. Passengers are never left waiting in a dark, stalled cabin during a power cut.</p>
+        </div>
+      </details>
+      <details class="vs-safety-item" style="background:#FDFBF6;border:1px solid rgba(198,161,91,0.22);border-radius:16px;padding:16px 18px">
+        <summary style="display:flex;align-items:center;gap:14px;cursor:pointer;list-style:none">
+          <span style="display:flex;align-items:center;justify-content:center;width:42px;height:42px;flex-shrink:0;border-radius:12px;background:linear-gradient(135deg,rgba(198,161,91,0.18),rgba(198,161,91,0.05));border:1px solid rgba(198,161,91,0.35)"><i class="fas fa-lightbulb" style="color:#C6A15B;font-size:15px"></i></span>
+          <span style="flex:1;font-size:15px;font-weight:600;color:#0D3B6E;letter-spacing:0.2px">Emergency Light</span>
+          <i class="fas fa-chevron-down vs-safety-chev" style="color:#C6A15B;font-size:12px;flex-shrink:0"></i>
+        </summary>
+        <div style="display:grid;grid-template-columns:110px 1fr;gap:16px;margin-top:14px;align-items:center">
+          <img src="uploads/WhatsApp%20Image%202026-09-01%20at%201.25.22%20PM.jpeg" alt="Elevator cabin interior lighting" style="width:100%;height:90px;object-fit:cover;border-radius:12px;display:block" />
+          <p style="margin:0;font-size:13.5px;line-height:1.7;color:#000000">A battery-backed light switches on automatically the instant main power is lost, keeping the cabin visible so passengers stay calm and can easily find the alarm or intercom panel until help arrives.</p>
+        </div>
+      </details>
+      <details class="vs-safety-item" style="background:#FDFBF6;border:1px solid rgba(198,161,91,0.22);border-radius:16px;padding:16px 18px">
+        <summary style="display:flex;align-items:center;gap:14px;cursor:pointer;list-style:none">
+          <span style="display:flex;align-items:center;justify-content:center;width:42px;height:42px;flex-shrink:0;border-radius:12px;background:linear-gradient(135deg,rgba(198,161,91,0.18),rgba(198,161,91,0.05));border:1px solid rgba(198,161,91,0.35)"><i class="fas fa-bell" style="color:#C6A15B;font-size:15px"></i></span>
+          <span style="flex:1;font-size:15px;font-weight:600;color:#0D3B6E;letter-spacing:0.2px">Emergency Alarm</span>
+          <i class="fas fa-chevron-down vs-safety-chev" style="color:#C6A15B;font-size:12px;flex-shrink:0"></i>
+        </summary>
+        <div style="display:grid;grid-template-columns:110px 1fr;gap:16px;margin-top:14px;align-items:center">
+          <img src="uploads/WhatsApp%20Image%202026-09-01%20at%201.26.28%20PM.jpeg" alt="Elevator control panel with alarm button" style="width:100%;height:90px;object-fit:cover;border-radius:12px;display:block" />
+          <p style="margin:0;font-size:13.5px;line-height:1.7;color:#000000">A single press of the alarm button inside the cabin sends an instant audible alert to security or the watchman on duty, so help is on its way within moments of any breakdown.</p>
+        </div>
+      </details>
+      <details class="vs-safety-item" style="background:#FDFBF6;border:1px solid rgba(198,161,91,0.22);border-radius:16px;padding:16px 18px">
+        <summary style="display:flex;align-items:center;gap:14px;cursor:pointer;list-style:none">
+          <span style="display:flex;align-items:center;justify-content:center;width:42px;height:42px;flex-shrink:0;border-radius:12px;background:linear-gradient(135deg,rgba(198,161,91,0.18),rgba(198,161,91,0.05));border:1px solid rgba(198,161,91,0.35)"><i class="fas fa-phone-volume" style="color:#C6A15B;font-size:15px"></i></span>
+          <span style="flex:1;font-size:15px;font-weight:600;color:#0D3B6E;letter-spacing:0.2px">Emergency Intercom</span>
+          <i class="fas fa-chevron-down vs-safety-chev" style="color:#C6A15B;font-size:12px;flex-shrink:0"></i>
+        </summary>
+        <div style="display:grid;grid-template-columns:110px 1fr;gap:16px;margin-top:14px;align-items:center">
+          <img src="uploads/WhatsApp%20Image%202026-09-01%20at%201.26.45%20PM.jpeg" alt="Elevator cabin with control panel" style="width:100%;height:90px;object-fit:cover;border-radius:12px;display:block" />
+          <p style="margin:0;font-size:13.5px;line-height:1.7;color:#000000">A built-in two-way intercom lets trapped passengers speak directly with security or a monitoring desk, so they are guided and reassured in real time rather than waiting in silence for a breakdown call to be answered.</p>
+        </div>
+      </details>
+      <details class="vs-safety-item" style="background:#FDFBF6;border:1px solid rgba(198,161,91,0.22);border-radius:16px;padding:16px 18px">
+        <summary style="display:flex;align-items:center;gap:14px;cursor:pointer;list-style:none">
+          <span style="display:flex;align-items:center;justify-content:center;width:42px;height:42px;flex-shrink:0;border-radius:12px;background:linear-gradient(135deg,rgba(198,161,91,0.18),rgba(198,161,91,0.05));border:1px solid rgba(198,161,91,0.35)"><i class="fas fa-fire" style="color:#C6A15B;font-size:15px"></i></span>
+          <span style="flex:1;font-size:15px;font-weight:600;color:#0D3B6E;letter-spacing:0.2px">Fire Alarm</span>
+          <i class="fas fa-chevron-down vs-safety-chev" style="color:#C6A15B;font-size:12px;flex-shrink:0"></i>
+        </summary>
+        <div style="display:grid;grid-template-columns:110px 1fr;gap:16px;margin-top:14px;align-items:center">
+          <img src="uploads/WhatsApp%20Image%202026-09-01%20at%201.27.21%20PM.jpeg" alt="Elevator landing doors on a building floor" style="width:100%;height:90px;object-fit:cover;border-radius:12px;display:block" />
+          <p style="margin:0;font-size:13.5px;line-height:1.7;color:#000000">On a fire signal, the elevator automatically recalls to the ground or a designated safe floor and stops answering normal calls, so passengers are never carried toward a fire floor during an emergency.</p>
+        </div>
+      </details>
+      <details class="vs-safety-item" style="background:#FDFBF6;border:1px solid rgba(198,161,91,0.22);border-radius:16px;padding:16px 18px">
+        <summary style="display:flex;align-items:center;gap:14px;cursor:pointer;list-style:none">
+          <span style="display:flex;align-items:center;justify-content:center;width:42px;height:42px;flex-shrink:0;border-radius:12px;background:linear-gradient(135deg,rgba(198,161,91,0.18),rgba(198,161,91,0.05));border:1px solid rgba(198,161,91,0.35)"><i class="fas fa-child-reaching" style="color:#C6A15B;font-size:15px"></i></span>
+          <span style="flex:1;font-size:15px;font-weight:600;color:#0D3B6E;letter-spacing:0.2px">Child Lock Safety System</span>
+          <i class="fas fa-chevron-down vs-safety-chev" style="color:#C6A15B;font-size:12px;flex-shrink:0"></i>
+        </summary>
+        <div style="display:grid;grid-template-columns:110px 1fr;gap:16px;margin-top:14px;align-items:center">
+          <img src="uploads/WhatsApp%20Image%202026-09-01%20at%201.29.38%20PM.jpeg" alt="Elevator shaft with guide rails and landing doors" style="width:100%;height:90px;object-fit:cover;border-radius:12px;display:block" />
+          <p style="margin:0;font-size:13.5px;line-height:1.7;color:#000000">Restricts unsupervised use so children cannot operate the lift alone or hold doors open mid-transit, giving parents in homes and apartments real peace of mind.</p>
+        </div>
+      </details>
+      <details class="vs-safety-item" style="background:#FDFBF6;border:1px solid rgba(198,161,91,0.22);border-radius:16px;padding:16px 18px">
+        <summary style="display:flex;align-items:center;gap:14px;cursor:pointer;list-style:none">
+          <span style="display:flex;align-items:center;justify-content:center;width:42px;height:42px;flex-shrink:0;border-radius:12px;background:linear-gradient(135deg,rgba(198,161,91,0.18),rgba(198,161,91,0.05));border:1px solid rgba(198,161,91,0.35)"><i class="fas fa-volume-high" style="color:#C6A15B;font-size:15px"></i></span>
+          <span style="flex:1;font-size:15px;font-weight:600;color:#0D3B6E;letter-spacing:0.2px">Floor Annunciator</span>
+          <i class="fas fa-chevron-down vs-safety-chev" style="color:#C6A15B;font-size:12px;flex-shrink:0"></i>
+        </summary>
+        <div style="display:grid;grid-template-columns:110px 1fr;gap:16px;margin-top:14px;align-items:center">
+          <img src="uploads/WhatsApp%20Image%202026-09-01%20at%201.30.07%20PM.jpeg" alt="Gearless traction machine" style="width:100%;height:90px;object-fit:cover;border-radius:12px;display:block" />
+          <p style="margin:0;font-size:13.5px;line-height:1.7;color:#000000">A clear audio-visual display announces the current floor and direction of travel, helping elderly and visually impaired passengers travel confidently and avoid exiting at the wrong floor.</p>
+        </div>
+      </details>
+      <details class="vs-safety-item" style="background:#FDFBF6;border:1px solid rgba(198,161,91,0.22);border-radius:16px;padding:16px 18px">
+        <summary style="display:flex;align-items:center;gap:14px;cursor:pointer;list-style:none">
+          <span style="display:flex;align-items:center;justify-content:center;width:42px;height:42px;flex-shrink:0;border-radius:12px;background:linear-gradient(135deg,rgba(198,161,91,0.18),rgba(198,161,91,0.05));border:1px solid rgba(198,161,91,0.35)"><i class="fas fa-square-parking" style="color:#C6A15B;font-size:15px"></i></span>
+          <span style="flex:1;font-size:15px;font-weight:600;color:#0D3B6E;letter-spacing:0.2px">Parking Facility</span>
+          <i class="fas fa-chevron-down vs-safety-chev" style="color:#C6A15B;font-size:12px;flex-shrink:0"></i>
+        </summary>
+        <div style="display:grid;grid-template-columns:110px 1fr;gap:16px;margin-top:14px;align-items:center">
+          <img src="uploads/WhatsApp%20Image%202026-09-01%20at%201.30.39%20PM.jpeg" alt="Elevator cabin interior with touch control panel" style="width:100%;height:90px;object-fit:cover;border-radius:12px;display:block" />
+          <p style="margin:0;font-size:13.5px;line-height:1.7;color:#000000">Automatically parks the car at a designated floor during idle hours or overnight, saving standby energy and leaving the lift ready and waiting for the very first call of the day.</p>
+        </div>
+      </details>
+      <details class="vs-safety-item" style="background:#FDFBF6;border:1px solid rgba(198,161,91,0.22);border-radius:16px;padding:16px 18px">
+        <summary style="display:flex;align-items:center;gap:14px;cursor:pointer;list-style:none">
+          <span style="display:flex;align-items:center;justify-content:center;width:42px;height:42px;flex-shrink:0;border-radius:12px;background:linear-gradient(135deg,rgba(198,161,91,0.18),rgba(198,161,91,0.05));border:1px solid rgba(198,161,91,0.35)"><i class="fas fa-weight-hanging" style="color:#C6A15B;font-size:15px"></i></span>
+          <span style="flex:1;font-size:15px;font-weight:600;color:#0D3B6E;letter-spacing:0.2px">Over Load Sensor &amp; Annunciator</span>
+          <i class="fas fa-chevron-down vs-safety-chev" style="color:#C6A15B;font-size:12px;flex-shrink:0"></i>
+        </summary>
+        <div style="display:grid;grid-template-columns:110px 1fr;gap:16px;margin-top:14px;align-items:center">
+          <img src="uploads/WhatsApp%20Image%202026-09-01%20at%201.31.00%20PM.jpeg" alt="Gold finish elevator cabin with etched pattern panels" style="width:100%;height:90px;object-fit:cover;border-radius:12px;display:block" />
+          <p style="margin:0;font-size:13.5px;line-height:1.7;color:#000000">Weighs every load in real time and sounds a clear alert while holding the doors open if the cabin is overloaded, protecting the hoisting equipment and preventing overload-related accidents.</p>
+        </div>
+      </details>
+    </div>
+    <style>
+      .vs-safety-item summary::-webkit-details-marker{display:none}
+      .vs-safety-item .vs-safety-chev{transition:transform 0.3s ease}
+      .vs-safety-item[open] .vs-safety-chev{transform:rotate(180deg)}
+      .vs-safety-item{transition:border-color 0.3s ease,box-shadow 0.3s ease}
+      .vs-safety-item:hover{border-color:#C6A15B;box-shadow:0 12px 26px rgba(13,59,110,0.1)}
+    </style>
+  </div>
+</section>
+
 <section id="range" aria-label="Latest technology elevators" style="background:#FFFFFF;border-top:1px solid rgba(198,161,91,0.2);overflow:hidden">
   <div style="padding:clamp(56px,7vw,110px) 0;display:grid;gap:clamp(30px,4vw,52px)">
     <div style="display:grid;gap:18px;justify-items:start;padding:0 clamp(24px,5vw,72px)">
@@ -413,7 +547,7 @@ summary::-webkit-details-marker{display:none}
 </x-dc>
 <script type="text/x-dc" data-dc-script>
 class Component extends DCLogic {
-  state = { sent: false, hero: 0, heroCycle: 0, r: 0, w: 0, svcMuted: false };
+  state = { sent: false, hero: 0, heroCycle: 0, r: 0, w: 0, svcMuted: false, safetyMuted: false };
   toggleSvcMute() {
     const next = !this.state.svcMuted;
     const video = document.getElementById('vs-svc-video-home');
@@ -429,6 +563,23 @@ class Component extends DCLogic {
     if (video.muted !== this.state.svcMuted) {
       video.muted = this.state.svcMuted;
       if (!this.state.svcMuted) { video.play(); }
+    }
+  }
+  toggleSafetyMute() {
+    const next = !this.state.safetyMuted;
+    const video = document.getElementById('vs-safety-video-home');
+    if (video) {
+      video.muted = next;
+      if (!next) { video.play(); }
+    }
+    this.setState({ safetyMuted: next });
+  }
+  syncSafetyVideo() {
+    const video = document.getElementById('vs-safety-video-home');
+    if (!video) return;
+    if (video.muted !== this.state.safetyMuted) {
+      video.muted = this.state.safetyMuted;
+      if (!this.state.safetyMuted) { video.play(); }
     }
   }
   rCount = 11;
@@ -447,6 +598,7 @@ class Component extends DCLogic {
     this.riv = setInterval(() => this.setState({ r: (this.state.r + 1) % this.rCount }), 2000);
     this.scheduleHero();
     this.startSvcVideo();
+    this.startSafetyVideo();
   }
   startSvcVideo() {
     const video = document.getElementById('vs-svc-video-home');
@@ -480,12 +632,45 @@ class Component extends DCLogic {
       }
     });
   }
+  startSafetyVideo() {
+    const video = document.getElementById('vs-safety-video-home');
+    if (!video) return;
+    video.muted = false;
+    const p = video.play();
+    if (p && p.catch) {
+      p.catch(() => {
+        video.muted = true;
+        this.setState({ safetyMuted: true });
+        video.play();
+      });
+    }
+    this._safetyObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) { entry.target.play().catch(() => {}); }
+        else { entry.target.pause(); }
+      });
+    }, { threshold: 0 });
+    this._safetyObserver.observe(video);
+    video.addEventListener('ended', () => {
+      video.currentTime = 0;
+      const rp = video.play();
+      if (rp && rp.catch) {
+        rp.catch(() => {
+          video.muted = true;
+          this.setState({ safetyMuted: true });
+          video.currentTime = 0;
+          video.play();
+        });
+      }
+    });
+  }
   componentDidUpdate() {
     if (this.lastHero !== this.state.hero) { this.lastHero = this.state.hero; this.scheduleHero(); }
     this.applyStatsLayout();
     this.syncSvcVideo();
+    this.syncSafetyVideo();
   }
-  componentWillUnmount() { clearInterval(this.wiv); clearInterval(this.riv); clearTimeout(this.hiv); window.removeEventListener('resize', this._resizeStats); if (this._svcObserver) this._svcObserver.disconnect(); }
+  componentWillUnmount() { clearInterval(this.wiv); clearInterval(this.riv); clearTimeout(this.hiv); window.removeEventListener('resize', this._resizeStats); if (this._svcObserver) this._svcObserver.disconnect(); if (this._safetyObserver) this._safetyObserver.disconnect(); }
 
   scheduleHero() {
     clearTimeout(this.hiv);
@@ -571,7 +756,12 @@ class Component extends DCLogic {
       svcMuteLabel: this.state.svcMuted ? 'Unmute video' : 'Mute video',
       svcSoundHintDisplay: this.state.svcMuted ? 'flex' : 'none',
       svcToggleMute: () => this.toggleSvcMute(),
-      svcStopAndToggleMute: (e) => { if (e && e.stopPropagation) e.stopPropagation(); this.toggleSvcMute(); }
+      svcStopAndToggleMute: (e) => { if (e && e.stopPropagation) e.stopPropagation(); this.toggleSvcMute(); },
+      safetyMuteIconClass: this.state.safetyMuted ? 'fas fa-volume-xmark' : 'fas fa-volume-high',
+      safetyMuteLabel: this.state.safetyMuted ? 'Unmute video' : 'Mute video',
+      safetySoundHintDisplay: this.state.safetyMuted ? 'flex' : 'none',
+      safetyToggleMute: () => this.toggleSafetyMute(),
+      safetyStopAndToggleMute: (e) => { if (e && e.stopPropagation) e.stopPropagation(); this.toggleSafetyMute(); }
     };
   }
 }
